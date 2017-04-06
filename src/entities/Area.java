@@ -7,5 +7,4 @@ public enum Area {
 	Educacao,
 	Comunicacao,
 	Arte
-
 }

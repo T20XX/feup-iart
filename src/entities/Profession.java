@@ -34,11 +34,11 @@ public enum Profession {
 	
 	private final Area area;
 	
-	Profession(Area area){
+	private Profession(Area area){
 		this.area=area;
 	}
 
-	private Area getArea(){
+	public Area getArea(){
 		return area;
 	}
 	
