@@ -89,15 +89,17 @@ public class Dinner {
 			int age;
 			String profession;
 			int nHobbies;
-			Hobby[] tmpHobbies = null;
-			Person[] tmpPeople = null;
+			Hobby[] tmpHobbies;
+			Person[] tmpPeople;
 			
 			while((nPeople = brPeople.readLine()) != null){
 				nPeoplei = Integer.parseInt(nPeople);
+				tmpPeople = new Person[nPeoplei];
 				for(int i = 0; i < nPeoplei; i++){
 					age = Integer.parseInt(brPeople.readLine());
 					profession = brPeople.readLine();
 					nHobbies = Integer.parseInt(brPeople.readLine());
+					tmpHobbies = new Hobby[nHobbies];
 					for(int j = 0; j < nHobbies; j++){
 						tmpHobbies[j] = Hobby.valueOf(brPeople.readLine());
 					}
