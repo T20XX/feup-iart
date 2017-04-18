@@ -76,30 +76,40 @@ public class Dinner {
 	}
 	private static Person[] parserPeople(String path){
 
-		ArrayList<Table> tmpPeople = new ArrayList<Table>();
 		BufferedReader brPeople = null;
 		FileReader frPeople = null;
 		
 		try {
 
 			frPeople = new FileReader(path);
-			brPeople = new BufferedReader(frTable);	
+			brPeople = new BufferedReader(frPeople);	
 			
-			String nTables;
-			int minSeats;
-			int maxSeats;
-			while((nTables = brPeople.readLine()) != null){
-				minSeats = Integer.parseInt(brTable.readLine());
-				maxSeats = Integer.parseInt(brTable.readLine());
-				for(int i = 0; i < Integer.parseInt(nTables); i++){
-					tmpPeople.add(new Table(minSeats, maxSeats));
+			String nPeople;
+			int nPeoplei;
+			int age;
+			String profession;
+			int nHobbies;
+			Hobby[] tmpHobbies = null;
+			Person[] tmpPeople = null;
+			
+			while((nPeople = brPeople.readLine()) != null){
+				nPeoplei = Integer.parseInt(nPeople);
+				for(int i = 0; i < nPeoplei; i++){
+					age = Integer.parseInt(brPeople.readLine());
+					profession = brPeople.readLine();
+					nHobbies = Integer.parseInt(brPeople.readLine());
+					for(int j = 0; j < nHobbies; j++){
+						tmpHobbies[j] = Hobby.valueOf(brPeople.readLine());
+					}
+					tmpPeople[i] = new Person(age, Profession.valueOf(profession), tmpHobbies);
+				}
+				if(tmpPeople.length > 1){
+					Group group = new Group(tmpPeople);
 				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Person[] emptyPeople = new Person[tmpPeople.size()];
-		tmpPeople.toArray(emptyPeople);
-		return emptyPeople;
+		return people;
 	}
 }
