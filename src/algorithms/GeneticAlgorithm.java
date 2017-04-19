@@ -9,14 +9,18 @@ import entities.Table;
 import main.Dinner;
 
 public class GeneticAlgorithm {
+	
+	private static int nBitsPerTable;
+	private static int nBitsTotal;
 
-	public static final Table[] execute(){
+	public static final Table[] execute(int initialPopulationSize){
 		//TODO receber config por parametros
-		int nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
-		int nBitsTotal = nBitsPerTable * Dinner.people.length;
-		BitSet chromosomes[] = randomInitialPopulation(4, nBitsTotal);
+		nBitsPerTable = 3; //(int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
+		nBitsTotal = nBitsPerTable * 5;//Dinner.people.length;
+		BitSet chromosomes[] = randomInitialPopulation(initialPopulationSize, nBitsTotal);
 		for(BitSet chromosome : chromosomes){
 			System.out.println(chromosome.toString());
+			System.out.println(bitSetToInt(chromosome)[0]);
 		}
 
 
@@ -55,5 +59,25 @@ public class GeneticAlgorithm {
 
 			return chromosomes;
 		}
+		private static Table[] fillTablesFromChromosome(BitSet chromosome){
+			Table[] filledTables = Dinner.emptyTables;
+			int[] tables = bitSetToInt(chromosome);
+			
+			
+			return filledTables;
+		}
+		private static int[] bitSetToInt(BitSet chromosome){
+			int[] result = new int[5];;//Dinner.people.length];
+			
+			for(int i = 0; i < 5; i++){
+				for(int j = 0; j < nBitsPerTable; j++){
+					result[i] += chromosome.get(i*nBitsPerTable + j) ? (1L << j) : 0L;
+				}
+			}
+			
+			
+			return result;
+		}
+			
 
 	}

@@ -31,15 +31,15 @@ public class Dinner {
 		
 		if(!parseTables(inputTablePath)){
 			System.out.println("Unable to parse tables file.");
-			return;
+			//return;
 		}
 		
 		if(!parsePeople(inputPeoplePath)){
 			System.out.println("Unable to parse tables file.");
-			return;
+			//return;
 		}
 		
-		Table[] bestSolution = GeneticAlgorithm.execute();
+		Table[] bestSolution = GeneticAlgorithm.execute(4);
 		
 		//TODO output best solution to ouputFile		
 	}	
