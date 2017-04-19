@@ -30,12 +30,20 @@ public class GeneticAlgorithm {
 
 		//TODO ciclo de algoritmo genetico
 		for(int i=0; i< 1; i++){
+			//SELECAO
+			
+			
+			//AVALIACAO
 			for(int nSolution = 0; nSolution < populationSize; nSolution++){
 				solutions[nSolution] = fillTablesFromChromosome(chromosomes[nSolution]);
 				avaliations[nSolution] = Table.getAvaliacaoRoom(solutions[nSolution]);
 				System.out.println(chromosomeToString(chromosomes[nSolution]));
 				System.out.println(avaliations[nSolution]);
 			}
+			
+			//EMPARELHAMENTO
+			
+			//CROSSOVER E MUTACAO
 
 		}
 
