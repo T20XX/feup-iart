@@ -67,7 +67,7 @@ public class Table {
 				}
 			}
 		}
-		afinidadeHobbies = (hobbiesTotal.size()/hobbiesComum.size())*100;
+		afinidadeHobbies = (hobbiesTotal.size()/(hobbiesComum.size()+1))*100;
 		return afinidadeHobbies;
 	}
 
@@ -111,10 +111,20 @@ public class Table {
 		double result = 0;
 
 		for(Table table: tables){
-			result += (table.getAvaliacao() - table.getPenalizacao());
+			if(table.getSeatPeople().size() > 0){
+			result += (table.getAvaliacao() );//- table.getPenalizacao());
+			}
 		}
 
 		return result;
+	}
+	
+	public ArrayList<Person> getSeatPeople() {
+		return seatPeople;
+	}
+
+	public void addPerson(Person p){
+		seatPeople.add(p);
 	}
 	
 	public int getMinSeats(){

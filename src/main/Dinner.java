@@ -40,7 +40,7 @@ public class Dinner {
 			return;
 		}
 		for(int i = 0; i < emptyTables.length; i++){
-			System.out.println(emptyTables[i].getMaxSeats() + " " + emptyTables[i].getMinSeats());
+			System.out.println(emptyTables[i].getMinSeats() + " - " + emptyTables[i].getMaxSeats());
 		}
 		for(int i = 0; i < people.length; i++){
 			System.out.println(people[i].getAge() + " " + people[i].getProfession() + " ");
