@@ -116,5 +116,12 @@ public class Table {
 
 		return result;
 	}
+	
+	public int getMinSeats(){
+		return this.min;
+	}
+	public int getMaxSeats(){
+		return this.max;
+	}
 
 }

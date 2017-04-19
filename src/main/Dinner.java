@@ -1,5 +1,6 @@
 package main;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,8 +39,26 @@ public class Dinner {
 			System.out.println("Unable to parse tables file.");
 			return;
 		}
+		for(int i = 0; i < emptyTables.length; i++){
+			System.out.println(emptyTables[i].getMaxSeats() + " " + emptyTables[i].getMinSeats());
+		}
+		for(int i = 0; i < people.length; i++){
+			System.out.println(people[i].getAge() + " " + people[i].getProfession() + " ");
+			for(int j = 0; j < people[i].getHobbies().length; j++){
+				System.out.println(people[i].getHobbies()[j]);
+			}
+		}
+		for(int i = 0; i < groups.length; i++){
+			System.out.println("GROUP: " + i);
+			for(int j = 0; j < groups[i].getMembers().length; j++){
+				System.out.println(groups[i].getMembers()[j].getAge() + " " + groups[i].getMembers()[j].getProfession() + " ");
+				for(int k = 0; k < groups[i].getMembers()[j].getHobbies().length; k++){
+					System.out.println(groups[i].getMembers()[j].getHobbies()[k]);
+				}
+			}
+		}		
 		
-		Table[] bestSolution = GeneticAlgorithm.execute();
+		//Table[] bestSolution = GeneticAlgorithm.execute();
 		
 		//TODO output best solution to ouputFile		
 	}	
