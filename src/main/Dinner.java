@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-package main;
-import java.util.ArrayList;
-
-import algorithms.GeneticAlgorithm;
-import entities.Group;
-import entities.Hobby;
-import entities.Person;
-import entities.Profession;
-import entities.Table;
-
-public class Dinner {
-	
-	public static final String FS = System.getProperty("file.separator");
-
-	public static Person people[];
-	public static Group groups[];
-	public static Table emptyTables[];
-
-	public static void main(String[] args) {
-		if(args.length != 2){
-			System.out.println("Usage: Dinner <Input file> <Output File>");
-			return;
-		}
-
-		String inputFilePath = args[0];
-		String outputFilePath = args[1];
-		
-
-		//TODO Parser input file
-		//As arrays ficam populadas
-		ArrayList<Person> tmpPeople = new ArrayList<Person>();
-		for(int i= 0; i < 10; i++){
-			tmpPeople.add(new Person(12, Profession.Medico, new Hobby[2]));
-		}
-		people = new Person[tmpPeople.size()];
-		tmpPeople.toArray(people);
-		ArrayList<Table> tmpTables = new ArrayList<Table>();
-		for(int i= 0; i < 15; i++){
-			tmpTables.add(new Table(2,4));
-		}
-		emptyTables = new Table[tmpTables.size()];
-		tmpTables.toArray(emptyTables);
-		
-		Table[] bestSolution = GeneticAlgorithm.execute();
-		
-		//TODO output best solution to ouputFile
-		
-		
-	}
-	
-
-}
-=======
 package main;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -75,7 +21,7 @@ public class Dinner {
 
 	public static void main(String[] args) {
 		if(args.length != 3){
-			System.out.println("Usage: Dinner <Input Table File> <Input People File> <Output File>");
+			System.out.println("Usage: Dinner <Input Tables File> <Input People File> <Output File>");
 			return;
 		}
 
@@ -83,37 +29,36 @@ public class Dinner {
 		String inputPeoplePath = args[1];
 		String outputFilePath = args[2];
 		
-		
-		//TODO Parser input file
-		parserTable(inputTablePath);
-		
-		//As arrays ficam populadas
-		ArrayList<Person> tmpPeople = new ArrayList<Person>();
-		for(int i= 0; i < 10; i++){
-			tmpPeople.add(new Person(12, Profession.Medico, new Hobby[2]));
+		if(!parseTables(inputTablePath)){
+			System.out.println("Unable to parse tables file.");
+			return;
 		}
-		people = new Person[tmpPeople.size()];
-		tmpPeople.toArray(people);
+		
+		if(!parsePeople(inputPeoplePath)){
+			System.out.println("Unable to parse tables file.");
+			return;
+		}
 		
 		Table[] bestSolution = GeneticAlgorithm.execute();
 		
 		//TODO output best solution to ouputFile		
 	}	
 	
-	private static Table[] parserTable(String path){
+	private static boolean parseTables(String path){
 
 		ArrayList<Table> tmpTables = new ArrayList<Table>();
+		
 		BufferedReader brTable = null;
 		FileReader frTable = null;
 		
 		try {
-
 			frTable = new FileReader(path);
 			brTable = new BufferedReader(frTable);	
 			
 			String nTables;
 			int minSeats;
 			int maxSeats;
+			
 			while((nTables = brTable.readLine()) != null){
 				minSeats = Integer.parseInt(brTable.readLine());
 				maxSeats = Integer.parseInt(brTable.readLine());
@@ -121,14 +66,22 @@ public class Dinner {
 					tmpTables.add(new Table(minSeats, maxSeats));
 				}
 			}
+
+			brTable.close();
 		} catch (IOException e) {
 			e.printStackTrace();
+			return false;
 		}
-		Table[] emptyTables = new Table[tmpTables.size()];
+		
+		emptyTables = new Table[tmpTables.size()];
 		tmpTables.toArray(emptyTables);
-		return emptyTables;
+		
+		return true;
 	}
-	private static Person[] parserPeople(String path){
+	private static boolean parsePeople(String path){
+
+		ArrayList<Person> peopleFinal = new ArrayList<Person>();
+		ArrayList<Group> groupsFinal = new ArrayList<Group>();
 
 		BufferedReader brPeople = null;
 		FileReader frPeople = null;
@@ -158,15 +111,24 @@ public class Dinner {
 						tmpHobbies[j] = Hobby.valueOf(brPeople.readLine());
 					}
 					tmpPeople[i] = new Person(age, Profession.valueOf(profession), tmpHobbies);
+					peopleFinal.add(tmpPeople[i]);
 				}
 				if(tmpPeople.length > 1){
-					Group group = new Group(tmpPeople);
+					groupsFinal.add(new Group(tmpPeople));
 				}
 			}
+			
+			brPeople.close();
 		} catch (IOException e) {
 			e.printStackTrace();
+			return false;
 		}
-		return people;
+		
+		people = new Person[peopleFinal.size()];
+		peopleFinal.toArray(people);
+		groups = new Group[groupsFinal.size()];
+		groupsFinal.toArray(groups);
+		
+		return true;
 	}
 }
->>>>>>> a8c8609f5bc326ae71dc73010eb95f1a84ca58cc
