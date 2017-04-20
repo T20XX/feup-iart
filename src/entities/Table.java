@@ -24,6 +24,10 @@ public class Table {
 	}
 
 
+	public Table(Table table) {
+		this(table.getMinSeats(), table.getMaxSeats());
+	}
+
 	private double getAfinidadeEtaria(){
 		double avgAge = 0, difAge = 0, afinidadeEtaria = 0;
 		int totalAge = 0;
@@ -109,12 +113,15 @@ public class Table {
 
 	public static double getAvaliacaoRoom(Table tables[]){
 		double result = 0;
+		int usedTables = 0;
 
 		for(Table table: tables){
 			if(table.getSeatPeople().size() > 0){
 			result += (table.getAvaliacao() );//- table.getPenalizacao());
+			usedTables++;
 			}
 		}
+		result /= usedTables;
 
 		return result;
 	}

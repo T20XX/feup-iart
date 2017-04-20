@@ -58,7 +58,7 @@ public class Dinner {
 			}
 		}		
 		
-		Table[] bestSolution = GeneticAlgorithm.execute(4);
+		Table[] bestSolution = GeneticAlgorithm.execute(4, 1);
 		
 		//TODO output best solution to ouputFile		
 	}	
