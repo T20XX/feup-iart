@@ -2,7 +2,10 @@ package algorithms;
 
 import java.util.Arrays;
 import java.util.BitSet;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import entities.Group;
 import entities.Person;
@@ -13,8 +16,9 @@ public class GeneticAlgorithm {
 
 	private static int nBitsPerTable;
 	private static int nBitsTotal;
+	private static int CROSSOVER_PROB = 50; //in 100
 	private static int MUTATION_PROB = 1; //in 10000
-	private static int MAX_LOOPS_WO_EVOLUTION = 10;
+	private static int MAX_LOOPS_WO_EVOLUTION = 2;
 
 	public static final Table[] execute(int populationSize, int eliteSelection){
 		//TODO receber config por parametros
@@ -25,10 +29,10 @@ public class GeneticAlgorithm {
 		double avaliations[] = new double[populationSize];
 		double totalAvaliation = 0;
 		double selectProbs[] = new double[populationSize + 1];
-		
+
 		double bestGenerationAvaliation = 0;
 		int bestGenerationIndex = 0;
-		
+
 
 		Table bestSolution[] = null;
 		double bestAvaliation = 0;
@@ -79,17 +83,38 @@ public class GeneticAlgorithm {
 
 			BitSet[] tmpChromosomes = new BitSet[populationSize];
 			for(int nSolution = 0; nSolution < eliteSelection; nSolution++){
-					tmpChromosomes[nSolution] = chromosomes[bestGenerationIndex];
+				tmpChromosomes[nSolution] = chromosomes[bestGenerationIndex];
 			}
 			for(int nSolution = eliteSelection; nSolution < (populationSize - eliteSelection + 1); nSolution++){
-				    tmpChromosomes[nSolution] = chromosomes[selectRandomIndex(selectProbs)];
+				tmpChromosomes[nSolution] = chromosomes[selectRandomIndex(selectProbs)];
 			}
 			chromosomes = tmpChromosomes;
 
-			// TODO EMPARELHAMENTO
-
-			// TODO CROSSOVER
-
+			// EMPARELHAMENTO E CROSSOVER
+			List<Integer> pairList = IntStream.rangeClosed(0, populationSize - 1)
+					.boxed().collect(Collectors.toList());
+			Random r = new Random();
+			int index1, value1, index2, value2 = 0;
+			BitSet crossoverChromosomes[] = new BitSet[2];
+			tmpChromosomes = new BitSet[populationSize];
+			for(int nSolution = 0; nSolution < populationSize; nSolution+=2){
+				if(pairList.size() >= 2){
+					index1 = r.nextInt(pairList.size());
+					value1 = pairList.get(index1);
+					pairList.remove(index1);
+					index2 = r.nextInt(pairList.size());
+					value2 = pairList.get(index2);
+					pairList.remove(index2);
+				} else {
+					break;
+				}
+				System.out.println(pairList);
+				crossoverChromosomes = crossover(chromosomes[value1],chromosomes[value2]);
+				tmpChromosomes[nSolution] = crossoverChromosomes[0];
+				tmpChromosomes[nSolution+1] = crossoverChromosomes[1];
+			}
+			chromosomes = tmpChromosomes;
+			
 			//MUTACAO
 			for(int nSolution = 0; nSolution < populationSize; nSolution++){
 				chromosomes[nSolution] = mutate(chromosomes[nSolution]);
@@ -97,6 +122,27 @@ public class GeneticAlgorithm {
 
 		}
 		return bestSolution;
+	}
+
+	private static BitSet[] crossover(BitSet chromosome1, BitSet chromosome2) {
+		BitSet[] result = {new BitSet(nBitsTotal), new BitSet(nBitsTotal)};
+		Random r = new Random();
+
+		for(int i = 0; i < nBitsTotal; i+=nBitsPerTable){
+			if(r.nextInt(100) < CROSSOVER_PROB){
+				for(int j= 0; j < nBitsPerTable; j++){
+					result[0].set(i*nBitsPerTable + j,chromosome1.get(i*nBitsPerTable + j));
+					result[1].set(i*nBitsPerTable + j,chromosome2.get(i*nBitsPerTable + j));
+				}
+			} else {
+				for(int j= 0; j < nBitsPerTable; j++){
+					result[0].set(i*nBitsPerTable + j,chromosome2.get(i*nBitsPerTable + j));
+					result[1].set(i*nBitsPerTable + j,chromosome1.get(i*nBitsPerTable + j));
+				}
+			}
+		}
+
+		return result;
 	}
 
 	private static int selectRandomIndex(double[] selectProbs) {
