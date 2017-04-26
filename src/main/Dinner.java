@@ -27,26 +27,26 @@ public class Dinner {
 	public static Table emptyTables[];
 
 	public static void main(String[] args) throws IOException {
-		/*if(args.length != 3){
-			System.out.println("Usage: Dinner <Input Tables File> <Input People File> <Output File>");
+		if(args.length != 3){
+			System.out.println("Usage: Dinner <Input Tables File> <Generate People File> <Output File>");
 			return;
-		}*/
+		}
 
-		/*String inputTablePath = args[0];
-		String inputPeoplePath = args[1];
-		String outputFilePath = args[2];*/
-		generatePeople("people.txt");
+		generatePeople(args[1]);
 		
-		/*if(!parseTables(inputTablePath)){
+		String inputTablePath = args[0];
+		String outputFilePath = args[2];
+		
+		if(!parseTables(inputTablePath)){
 			System.out.println("Unable to parse tables file.");
 			return;
 		}
 		
-		if(!parsePeople(inputPeoplePath)){
+		if(!parsePeople(args[1])){
 			System.out.println("Unable to parse tables file.");
 			return;
-		}*/
-		/*for(int i = 0; i < emptyTables.length; i++){
+		}
+		for(int i = 0; i < emptyTables.length; i++){
 			System.out.println(emptyTables[i].getMinSeats() + " - " + emptyTables[i].getMaxSeats());
 		}
 		for(int i = 0; i < people.length; i++){
@@ -66,7 +66,7 @@ public class Dinner {
 		}		
 		
 		Table[] bestSolution = GeneticAlgorithm.execute(4, 1);
-		*/
+		
 		//TODO output best solution to ouputFile		
 	}	
 	
@@ -160,9 +160,9 @@ public class Dinner {
 	
 	public static void generatePeople(String path) throws IOException{
 		int nGroups = 100, randNGroups = 0, age = 0, nProfession = 0, nHobbies = 0, nHobby = 0;
-		Profession p = null;		
+		Profession p = null;
 		Hobby h = null;
-		Set<Hobby> setHobbies = null;
+		Set<Integer> setHobbies = null;
 		
 		BufferedWriter br = null;
 		FileWriter fr = null;
@@ -179,18 +179,17 @@ public class Dinner {
 				nProfession = rand.nextInt(Profession.values().length);
 				p = Profession.values()[nProfession];
 				nHobbies = rand.nextInt(Hobby.values().length);
-				br.write(age  + "\n" + p + "\n");
-				setHobbies = new HashSet<Hobby>();
+					br.write(age  + "\n" + p + "\n");
+					setHobbies = new HashSet<Integer>();
 				for(int k = 0; k < nHobbies; k++){
 					nHobby = rand.nextInt(Hobby.values().length);
-					h = Hobby.values()[nHobby];
-					setHobbies.add(h);
+					setHobbies.add(nHobby);
 				}
 				nHobbies = setHobbies.size();
 				br.write(nHobbies + "\n");
-				 Iterator<Hobby> iterator = setHobbies.iterator();
-				 while(iterator.hasNext()) {
-				        br.write(iterator.toString() + "\n");
+				 Iterator<Integer> iterator = setHobbies.iterator();
+				 while(iterator.hasNext()){
+					 br.write(Hobby.values()[iterator.next()] + "\n");
 				    }
 			}
 		}
