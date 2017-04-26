@@ -88,11 +88,13 @@ public class Table {
 		HashMap<Group, Integer> groupsTable  = new HashMap<Group, Integer>();
 		for(Person person : seatPeople){
 			Group group = person.getGroup();
+			if(group != null){
 			Integer count = groupsTable.get(group);
 			if(count == null){
 				groupsTable.put(group, 1);
 			} else {
 				groupsTable.put(group, count + 1);
+			}
 			}
 		}
 		int totalGroups = groupsTable.size();
@@ -132,6 +134,12 @@ public class Table {
 
 	public void addPerson(Person p){
 		seatPeople.add(p);
+	}
+	
+	public Person removePerson(int index){
+		Person p = seatPeople.get(index);
+		seatPeople.remove(index);
+		return p;
 	}
 	
 	public int getMinSeats(){

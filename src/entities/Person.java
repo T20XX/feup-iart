@@ -5,7 +5,7 @@ public class Person {
 	private int age;
 	private Profession profession;
 	private Hobby[] hobbies;
-	private Group group;
+	private Group group = null;
 	
 	public Person(int age, Profession profession, Hobby[] hobbies){
 		this.age = age;
