@@ -1,5 +1,8 @@
 package entities;
 
 public enum Hobby {
-	Xadrez
+	Xadrez,
+	Damas,
+	Tenis,
+	Futebol
 }

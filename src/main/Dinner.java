@@ -1,9 +1,15 @@
 package main;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.Set;
 
 import algorithms.GeneticAlgorithm;
 import entities.Group;
@@ -20,17 +26,18 @@ public class Dinner {
 	public static Group groups[];
 	public static Table emptyTables[];
 
-	public static void main(String[] args) {
-		if(args.length != 3){
+	public static void main(String[] args) throws IOException {
+		/*if(args.length != 3){
 			System.out.println("Usage: Dinner <Input Tables File> <Input People File> <Output File>");
 			return;
-		}
+		}*/
 
-		String inputTablePath = args[0];
+		/*String inputTablePath = args[0];
 		String inputPeoplePath = args[1];
-		String outputFilePath = args[2];
+		String outputFilePath = args[2];*/
+		generatePeople("people.txt");
 		
-		if(!parseTables(inputTablePath)){
+		/*if(!parseTables(inputTablePath)){
 			System.out.println("Unable to parse tables file.");
 			return;
 		}
@@ -38,8 +45,8 @@ public class Dinner {
 		if(!parsePeople(inputPeoplePath)){
 			System.out.println("Unable to parse tables file.");
 			return;
-		}
-		for(int i = 0; i < emptyTables.length; i++){
+		}*/
+		/*for(int i = 0; i < emptyTables.length; i++){
 			System.out.println(emptyTables[i].getMinSeats() + " - " + emptyTables[i].getMaxSeats());
 		}
 		for(int i = 0; i < people.length; i++){
@@ -59,7 +66,7 @@ public class Dinner {
 		}		
 		
 		Table[] bestSolution = GeneticAlgorithm.execute(4, 1);
-		
+		*/
 		//TODO output best solution to ouputFile		
 	}	
 	
@@ -149,5 +156,45 @@ public class Dinner {
 		groupsFinal.toArray(groups);
 		
 		return true;
+	}
+	
+	public static void generatePeople(String path) throws IOException{
+		int nGroups = 100, randNGroups = 0, age = 0, nProfession = 0, nHobbies = 0, nHobby = 0;
+		Profession p = null;		
+		Hobby h = null;
+		Set<Hobby> setHobbies = null;
+		
+		BufferedWriter br = null;
+		FileWriter fr = null;
+		//random.nextInt(max - min + 1) + min
+		Random rand = new Random();
+			fr = new FileWriter(path);
+			br = new BufferedWriter(fr);
+
+		for(int i = 0; i < nGroups; i++){
+			randNGroups = rand.nextInt(5 - 1 + 1) +1;
+			br.write(randNGroups + "\n");
+			for(int j = 0; j < randNGroups; j++){
+				age = rand.nextInt(100 -1 + 1) +1;
+				nProfession = rand.nextInt(Profession.values().length);
+				p = Profession.values()[nProfession];
+				nHobbies = rand.nextInt(Hobby.values().length);
+				br.write(age  + "\n" + p + "\n");
+				setHobbies = new HashSet<Hobby>();
+				for(int k = 0; k < nHobbies; k++){
+					nHobby = rand.nextInt(Hobby.values().length);
+					h = Hobby.values()[nHobby];
+					setHobbies.add(h);
+				}
+				nHobbies = setHobbies.size();
+				br.write(nHobbies + "\n");
+				 Iterator<Hobby> iterator = setHobbies.iterator();
+				 while(iterator.hasNext()) {
+				        br.write(iterator.toString() + "\n");
+				    }
+			}
+		}
+		br.close();
+		fr.close();
 	}
 }
