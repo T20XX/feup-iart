@@ -31,18 +31,17 @@ public class Dinner {
 			System.out.println("Usage: Dinner <Input Tables File> <Generate People File> <Output File>");
 			return;
 		}
-
-		generatePeople(args[1]);
+		String tablesPath = args[0];
+		String peoplePath = args[1];
+		generateTables(tablesPath);
+		generatePeople(peoplePath);
 		
-		String inputTablePath = args[0];
-		String outputFilePath = args[2];
-		
-		if(!parseTables(inputTablePath)){
+		if(!parseTables(tablesPath)){
 			System.out.println("Unable to parse tables file.");
 			return;
 		}
 		
-		if(!parsePeople(args[1])){
+		if(!parsePeople(peoplePath)){
 			System.out.println("Unable to parse tables file.");
 			return;
 		}
@@ -191,6 +190,35 @@ public class Dinner {
 				 while(iterator.hasNext()){
 					 br.write(Hobby.values()[iterator.next()] + "\n");
 				    }
+			}
+		}
+		br.close();
+		fr.close();
+	}
+	
+	public static void generateTables(String path) throws IOException{
+		int nTablesTypes = 20, nTables = 0, tmpMin = 0, tmpMax = 0, seats = 0;
+		BufferedWriter br = null;
+		FileWriter fr = null;
+		Set<Integer> tablesSeats = null;
+		boolean sup = false;
+		//random.nextInt(max - min + 1) + min
+		Random rand = new Random();
+		fr = new FileWriter(path);
+		br = new BufferedWriter(fr);
+		tablesSeats = new HashSet<Integer>();
+		for(int i = 0; i < nTablesTypes; i++){
+			nTables = rand.nextInt(10 - 2 + 1) + 2;
+			tmpMin = rand.nextInt(18-1+1)+1;
+			while(!sup){
+				tmpMax = rand.nextInt(20-1+1)+1;
+				if(tmpMax > tmpMin)
+					sup = true;
+			}
+			sup = false;
+			seats = tmpMin* 100 + tmpMax;
+			if(tablesSeats.add(seats)){
+				br.write(nTables + "\n" + tmpMin + "\n" + tmpMax + "\n");
 			}
 		}
 		br.close();
