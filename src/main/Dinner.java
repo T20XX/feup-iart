@@ -168,10 +168,10 @@ public class Dinner {
 			}
 		}
 		
-		for(Table table : bestSolution){
-			br.write("Min, Max Lugares : " + table.getMinSeats() + ", " + table.getMaxSeats() + "\n");
-			for(int i = 0; i < table.getSeatPeople().size(); i++){
-				br.write(table.getSeatPeople().get(i).getID() + "\n");
+		for(int i = 0; i < bestSolution.length; i++){
+			br.write("Min, Max Lugares : " + bestSolution[i].getMinSeats() + ", " + bestSolution[i].getMaxSeats() + "\n");
+			for(int j = 0; j < bestSolution[i].getSeatPeople().size(); j++){
+				br.write(bestSolution[i].getSeatPeople().get(j).getID() + "\n");
 			}
 		}
 		br.close();
