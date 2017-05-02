@@ -1,1816 +1,1689 @@
 1
-89
-Guia
-Futebol
+19
+Cinema
+Xadrez
+Damas
 2
-20
+10
+Agente
+3
+18
+Moda
+Futebol
+4
+79
+RelPublicas
+5
+99
+Geografo
+6
+25
+Biologo
+Damas
+Tenis
+Futebol
+7
+96
 Farmaceutico
 Futebol
-3
-96
-Teatro
-Xadrez
-Tenis
-4
-15
-Aeronautica
-Tenis
-5
-32
-Fotografia
-Tenis
-6
-67
-Jornalismo
-Xadrez
-Damas
-7
-67
-Cinema
-Damas
-Tenis
 8
-58
-Medico
-Xadrez
+84
+Enfermeio
+Damas
 Tenis
 9
-58
+73
 Agente
+Damas
 10
-68
-Fisioterapeuta
-Xadrez
-Damas
-11
-99
+25
 RelPublicas
-Damas
 Futebol
+11
+100
+Agente
+Tenis
 12
-71
-Medico
+72
+Nutricionista
+Tenis
+Futebol
 13
-48
-Fisico
+85
+Jornalismo
 Damas
+Tenis
+Futebol
 14
-39
-Teatro
-Damas
-Futebol
+77
+Medico
 15
-92
-Aeronautica
+10
+Enfermeio
 Damas
-Tenis
-Futebol
 16
-58
+15
 Pedagogico
-Xadrez
-Damas
-Futebol
 17
-32
-Farmaceutico
-Damas
-Tenis
+98
+Quimico
 Futebol
 18
-64
-Fisioterapeuta
-Xadrez
+55
+Civil
+Damas
 Futebol
 19
-69
-Danca
+77
+Fisico
+Xadrez
+20
+97
+Enfermeio
+21
+95
+Agente
+Futebol
+22
+72
+Nutricionista
+23
+34
+Fisico
+Xadrez
+24
+11
+Matematico
+Xadrez
+25
+23
+Pedagogico
 Tenis
 Futebol
-20
-76
-Danca
-21
-90
-Industrial
-22
-32
-Civil
-Xadrez
-Futebol
-23
-12
-Medico
-Xadrez
-Futebol
-24
-79
-Psicologo
-25
-80
-Fisioterapeuta
 26
-27
+100
 Pedagogico
-Xadrez
-Futebol
 27
-2
-Fisico
+30
+Bartender
 Xadrez
 Tenis
 28
-90
-Cinema
+86
+Aeronautica
 29
-5
-Jornalismo
-Tenis
+57
+Fisico
 30
-87
-Biologo
+72
+Recepcionista
+Xadrez
 31
-32
-Fisioterapeuta
-Xadrez
-Futebol
-32
-1
+20
 Guia
+32
+97
+Matematico
 Xadrez
-33
-45
-Quimico
-Xadrez
+Damas
 Tenis
+33
+48
+Fisico
+Tenis
+Futebol
 34
-39
-Pedagogico
+38
+Fisioterapeuta
+Damas
+Futebol
 35
-95
-Biologo
+51
+Jornalismo
 Tenis
 Futebol
 36
-13
-Enfermeio
-Damas
-Tenis
-37
-91
-Jornalismo
-Xadrez
-Tenis
-Futebol
-38
-92
-Medico
-39
-70
-Agente
-Xadrez
-Damas
-40
-40
-Guia
-Xadrez
-41
-23
-Civil
-Xadrez
-Damas
-42
-92
-LocRadio
-43
-74
-Bartender
-Futebol
-44
-65
-Fotografia
-Damas
-Tenis
-45
-62
-Nutricionista
-Xadrez
 46
-93
-Matematico
+Cinema
+37
+46
+Quimico
+Tenis
+38
+52
+Cinema
+Futebol
+39
+46
+Informitico
+Tenis
+Futebol
+40
+58
+Agente
+Futebol
+41
+89
+Moda
+Xadrez
+Futebol
+42
+74
+Recepcionista
+Damas
+43
+16
+Jornalismo
+Tenis
+44
+11
+Medico
+45
+18
+Jornalismo
+Damas
+Futebol
+46
+58
+Fisioterapeuta
+Xadrez
 Damas
 47
-66
-Fotografia
+79
+Teatro
+Damas
 Tenis
 48
-62
-Medico
-Futebol
-49
-61
-Cinema
-50
-62
-Enfermeio
-51
-46
-Moda
+86
+Fisico
 Tenis
+49
+82
+Moda
 Futebol
+50
+15
+Teatro
+Tenis
+51
+26
+Guia
+Damas
+Tenis
 52
 59
-Matematico
-Xadrez
-Damas
-Tenis
+Danca
+Futebol
 53
-59
-Teatro
-Xadrez
-Damas
-54
-75
-Musica
-Xadrez
-Damas
-Futebol
-55
-92
-RelPublicas
-Xadrez
-56
-3
-Guia
-Tenis
-Futebol
-57
-13
-Enfermeio
-58
-63
-Teatro
-Damas
-Tenis
-59
-49
-RelPublicas
-Damas
-Tenis
-60
-51
-Moda
-Damas
-Tenis
-61
-78
-Biologo
-Futebol
-62
-44
-Industrial
-Damas
-Tenis
-63
-42
-Informitico
-Xadrez
-64
-12
-Geografo
-65
-77
-Recepcionista
-Tenis
-Futebol
-66
-20
-Publicidade
-Damas
-67
-31
-Cinema
-Futebol
-68
 85
-Aeronautica
-69
-91
-Biologo
-Tenis
-70
-18
-Nutricionista
-Tenis
-71
-18
-Informitico
-Tenis
-Futebol
-72
-49
 Medico
 Xadrez
-73
-34
-Fisioterapeuta
-Damas
-74
-85
-Fotografia
-Xadrez
-75
-76
-Biologo
-Xadrez
-Damas
-Futebol
-76
-99
+Tenis
+54
+20
 Jornalismo
+Xadrez
+Tenis
+55
+11
+Nutricionista
+Tenis
+56
+81
+Biologo
+Damas
+57
+99
+Teatro
+58
+66
+Geografo
+Futebol
+59
+29
+Recepcionista
+60
+97
+Medico
+Xadrez
+Futebol
+61
+43
+Recepcionista
+Xadrez
+Futebol
+62
+60
+Danca
+63
+56
+Matematico
+Xadrez
+Damas
+64
+26
+Geografo
 Damas
 Tenis
-77
+65
+14
+Fisioterapeuta
+Xadrez
+Tenis
+66
+95
+RelPublicas
+Damas
+Tenis
+67
 88
+Industrial
+Damas
+68
+11
+Fotografia
+Damas
+Futebol
+69
+71
+Agente
+Xadrez
+Tenis
+Futebol
+70
+56
 Enfermeio
 Tenis
-78
-83
-Cinema
+Futebol
+71
+31
+Pedagogico
+Futebol
+72
+71
+Civil
+73
+99
+Aeronautica
+Futebol
+74
+51
+Enfermeio
+75
+66
+Agente
 Xadrez
+Futebol
+76
+50
+Agente
+Tenis
+77
+51
+Fotografia
+78
+38
+Geografo
 Tenis
 79
-79
-Nutricionista
+81
+Enfermeio
 Damas
 80
-4
-Fotografia
+69
+Medico
+Xadrez
 Damas
-Tenis
+Futebol
 81
-88
-Agente
-Futebol
+51
+Cinema
 82
-8
+96
 Publicidade
-83
-90
-RelPublicas
-Xadrez
-Damas
-Tenis
-84
-65
-Matematico
-Damas
-Tenis
-85
-79
-Musica
-Xadrez
-Damas
 Futebol
-86
-87
-Psicologo
-87
-14
+83
+35
 Teatro
 Tenis
+Futebol
+84
+72
+RelPublicas
+Xadrez
+Futebol
+85
+54
+Quimico
+Futebol
+86
+51
+Biologo
+Xadrez
+Tenis
+Futebol
+87
+58
+Medico
+Damas
 88
-28
-Aeronautica
+7
+Fisioterapeuta
 Damas
 Tenis
 89
-13
-Fisioterapeuta
-90
-65
-Fisioterapeuta
+18
+Psicologo
 Damas
+90
+79
+Geografo
 Futebol
 91
-100
-Agente
+9
+Moda
 92
-8
-Matematico
-Damas
-Futebol
+37
+Psicologo
+Xadrez
 93
-23
-Industrial
-Tenis
-94
-24
-Pedagogico
+79
+Agente
+Xadrez
 Damas
-Tenis
+94
+79
+Matematico
+Futebol
 95
-2
-Nutricionista
+70
+Fisico
 96
-34
-Farmaceutico
+31
+LocRadio
+Futebol
+97
+41
+Enfermeio
+98
+66
+Medico
+99
+52
+Aeronautica
+Xadrez
+100
+91
+Fisico
 Xadrez
 Damas
 Futebol
-97
-87
+101
+79
+Fotografia
+102
+17
 Fotografia
 Damas
 Futebol
-98
-36
-Moda
-Futebol
-99
-9
-Medico
-Xadrez
-100
-63
-Farmaceutico
-Xadrez
-Tenis
-101
-57
-Guia
-Damas
-102
-55
-Matematico
 103
-29
-Civil
-Xadrez
-Futebol
+61
+Farmaceutico
 104
-92
-LocRadio
+1
+Industrial
+Damas
+Tenis
 105
-71
-Enfermeio
+39
+Fisioterapeuta
 Xadrez
+Damas
 106
-96
-Psicologo
-Futebol
+87
+Fisioterapeuta
 107
-68
-Jornalismo
+39
+Industrial
+Xadrez
 Tenis
 108
-71
-Nutricionista
+29
+Guia
+Futebol
 109
-17
-Cinema
-Damas
-Tenis
+100
+Quimico
 110
-7
-Bartender
-Tenis
-Futebol
-111
-30
-LocRadio
-Tenis
-Futebol
-112
-60
-Jornalismo
-113
-56
-Danca
-Tenis
-114
-62
-Psicologo
+46
+Fisioterapeuta
 Xadrez
+111
+93
+Geografo
+112
+25
+Industrial
+113
+10
+Fotografia
+114
+58
+Publicidade
 Futebol
 115
-43
-Agente
-Damas
+39
+Psicologo
+Xadrez
 116
-38
-Teatro
+93
+Moda
 Xadrez
 117
-43
-Civil
-118
-53
-Enfermeio
-119
-88
-Medico
-120
-36
-Recepcionista
-Xadrez
-121
-10
-Farmaceutico
-Xadrez
-Futebol
-122
-22
-Fisioterapeuta
-123
-87
-Musica
-Xadrez
-124
-28
-Pedagogico
-125
-72
-Civil
-Tenis
-126
-3
-Nutricionista
-Xadrez
-127
-75
-Matematico
-Xadrez
-Tenis
-Futebol
-128
-55
-LocRadio
-Tenis
-Futebol
-129
-83
-Pedagogico
-Xadrez
-Damas
-Tenis
-130
-9
-Teatro
-131
-12
-Farmaceutico
-Xadrez
-Tenis
-Futebol
-132
-92
-Psicologo
-Futebol
-133
-87
-Quimico
-Tenis
-134
-56
-Civil
-Tenis
-Futebol
-135
-52
-Civil
-Damas
-Tenis
-136
-55
-Geografo
-Xadrez
-Futebol
-137
 26
-Publicidade
-138
-13
 Biologo
+Futebol
+118
+93
+Fotografia
+119
+50
+Fotografia
+120
+99
+Aeronautica
+Xadrez
+Damas
+Futebol
+121
+97
+Recepcionista
+122
+6
+Quimico
+Xadrez
+123
+60
+Fotografia
+Damas
+Futebol
+124
+59
+RelPublicas
 Damas
 Tenis
+125
+89
+Moda
 Futebol
-139
-100
+126
+48
+Farmaceutico
+Damas
+Tenis
+127
+65
 Matematico
 Xadrez
-Tenis
-140
-74
-Biologo
-Xadrez
-Tenis
-141
-73
+Damas
+128
+37
 Bartender
 Damas
+Tenis
+129
+15
+Guia
+130
+69
+Farmaceutico
+Xadrez
+Tenis
 Futebol
-142
-9
-Quimico
-143
+131
 16
 Guia
 Damas
-144
-63
+Futebol
+132
+88
 LocRadio
-145
-90
-Recepcionista
-Tenis
-146
-43
-Guia
-Futebol
-147
-55
-Psicologo
-Damas
-Tenis
-148
-56
-Recepcionista
-Tenis
-Futebol
-149
-54
-Biologo
-Tenis
-Futebol
-150
-63
-Civil
-Futebol
-151
-45
-Industrial
 Xadrez
 Damas
+133
+1
+Teatro
+Xadrez
+Futebol
+134
+1
+Musica
+135
+64
+Guia
+Futebol
+136
+79
+Industrial
 Tenis
-152
+Futebol
+137
+1
+LocRadio
+Xadrez
+Futebol
+138
+1
+Guia
+Damas
+139
 50
-Cinema
+Fisico
+Xadrez
+Futebol
+140
+64
+Geografo
+Xadrez
+Futebol
+141
+11
+Farmaceutico
+Xadrez
+142
+72
+Aeronautica
+Xadrez
+Damas
+Futebol
+143
+77
+Civil
+Xadrez
+Tenis
+Futebol
+144
+78
+Aeronautica
+Xadrez
+Damas
+145
+50
+Teatro
+146
+96
+Psicologo
+Damas
+147
+77
+Farmaceutico
+148
+10
+Biologo
+Tenis
+149
+60
+Matematico
+Damas
+Tenis
+150
+38
+Industrial
+Damas
+151
+24
+Informitico
+Damas
+Futebol
+152
+89
+Guia
 Futebol
 153
-46
-Matematico
-Tenis
+41
+Medico
 154
-63
-Enfermeio
-Xadrez
-Damas
-155
-58
-Industrial
-Xadrez
-Damas
-Tenis
-156
-50
-Recepcionista
-Xadrez
-Tenis
-Futebol
-157
-33
-Geografo
-Xadrez
-158
-64
+13
 Fotografia
-159
-98
-RelPublicas
 Xadrez
+155
+56
+Recepcionista
+Damas
+Futebol
+156
+87
+Pedagogico
+Xadrez
+Damas
+157
+40
+Informitico
 Tenis
 Futebol
+158
+26
+Musica
+Xadrez
+Damas
+159
+42
+Danca
+Damas
 160
-6
-Geografo
-Tenis
-Futebol
+27
+LocRadio
+Xadrez
+Damas
 161
-75
-Industrial
+39
+Fotografia
+Tenis
 Futebol
 162
-51
-Matematico
-Damas
-Tenis
-Futebol
-163
-31
-Aeronautica
-Xadrez
-Damas
-Futebol
-164
-37
-Enfermeio
-Damas
-Tenis
-165
-28
-Agente
-Xadrez
-Damas
-Tenis
-166
-67
-Quimico
-167
-12
-Biologo
-Tenis
-168
-79
-RelPublicas
-Futebol
-169
-73
-LocRadio
-170
-86
-Enfermeio
-Xadrez
-Damas
-Futebol
-171
-90
-Fisico
-Xadrez
-172
-68
-Agente
-173
-78
-Fisico
-174
-96
+2
 Cinema
-Damas
-175
-30
-Fisioterapeuta
 Xadrez
 Damas
-176
-93
+163
+100
 Informitico
 Damas
-177
-60
-Enfermeio
-178
-12
+Tenis
+164
+89
 Jornalismo
-179
-94
-Aeronautica
-Xadrez
+Tenis
 Futebol
-180
-7
+165
+63
+Fotografia
+166
+16
+Bartender
+167
+63
+LocRadio
+Futebol
+168
+73
+Jornalismo
+Damas
+169
+85
+Fisico
+Xadrez
+Damas
+Tenis
+170
+43
+Medico
+171
+23
+Bartender
+Futebol
+172
+20
+Quimico
+Tenis
+173
+97
+Farmaceutico
+Damas
+Tenis
+Futebol
+174
+9
+Danca
+175
+8
+Farmaceutico
+Damas
+Futebol
+176
+61
+Medico
+Damas
+Tenis
+177
+78
+Matematico
+Tenis
+Futebol
+178
+36
 Cinema
 Xadrez
 Damas
-Futebol
-181
-10
+Tenis
+179
+61
+Fisico
+Xadrez
+180
+84
 Fotografia
 Damas
 Tenis
-182
-94
-Informitico
-Tenis
-183
-67
-Nutricionista
-Tenis
+181
+100
+Geografo
+Xadrez
 Futebol
+182
+12
+Enfermeio
+183
+54
+Danca
 184
-33
+61
+Jornalismo
+Xadrez
+Damas
+Tenis
+185
+92
+Pedagogico
+186
+26
+Aeronautica
+187
+74
+Fisico
+Tenis
+188
+90
+Fisico
+189
+57
+Pedagogico
+Xadrez
+Damas
+190
+22
+Jornalismo
+Xadrez
+Damas
+Tenis
+191
+41
 Quimico
 Xadrez
 Damas
-Futebol
-185
-1
-Moda
-186
-85
-Danca
-Xadrez
-Damas
-187
-38
-Danca
-Xadrez
-Damas
-188
-93
-Teatro
-Damas
-Futebol
-189
-81
-Agente
-Xadrez
-190
-10
-RelPublicas
-Damas
-191
-85
-Fisioterapeuta
 192
-49
-Matematico
-Damas
-193
-37
-Farmaceutico
-194
-62
-Fisico
-195
-90
+28
 Psicologo
 Xadrez
-196
-7
-Recepcionista
 Tenis
 Futebol
-197
-72
-Informitico
+193
+22
+Nutricionista
+194
+34
+Medico
 Tenis
+Futebol
+195
+20
+Teatro
+Futebol
+196
+77
+Geografo
+Damas
+197
+52
+Fisico
+Xadrez
 Futebol
 198
-83
-Guia
-Damas
+25
+RelPublicas
+Xadrez
 199
-47
-Bartender
+37
+Enfermeio
+Damas
 Tenis
 Futebol
 200
-8
-Pedagogico
+13
+Industrial
+Damas
+201
+87
+Medico
+Futebol
+202
+59
+Quimico
 Xadrez
 Damas
 Tenis
-201
-22
-Aeronautica
-Tenis
-Futebol
-202
-35
-Cinema
-Tenis
 203
-25
-Aeronautica
-Damas
-204
-86
-Recepcionista
-Tenis
+93
+Industrial
+Xadrez
 Futebol
+204
+63
+Danca
 205
-10
-Jornalismo
+19
+Industrial
 206
-48
-Fisioterapeuta
-207
-88
-Moda
+90
+Pedagogico
+Xadrez
 Damas
-Tenis
+Futebol
+207
+21
+Teatro
 208
-56
-Musica
+44
+Pedagogico
 Xadrez
 Futebol
 209
-1
-Biologo
-Damas
+52
+Informitico
+Tenis
 210
-24
-Teatro
-Xadrez
-Damas
-211
-44
-Agente
-Xadrez
-Tenis
-Futebol
-212
-8
-Aeronautica
-Tenis
-Futebol
-213
-22
-Pedagogico
-214
-62
-Aeronautica
-Tenis
-215
-61
+11
 Fisico
 Damas
-216
-18
-Cinema
+Futebol
+211
+53
+Nutricionista
+Xadrez
+212
+62
+Moda
+Xadrez
+Damas
+Futebol
+213
+38
+LocRadio
+Tenis
+Futebol
+214
+77
+Bartender
+Damas
+215
+27
+Informitico
+Xadrez
 Damas
 Tenis
+216
+30
+Pedagogico
 217
-45
-Recepcionista
-Tenis
+71
+Industrial
 218
-12
-Bartender
+4
+Geografo
+Futebol
 219
-9
-RelPublicas
-Xadrez
+84
+Guia
 Tenis
 Futebol
 220
-12
+94
 Industrial
-Damas
 221
-65
-Farmaceutico
-222
-87
-Informitico
-Xadrez
-Tenis
-Futebol
-223
-39
-Cinema
-224
-89
-Pedagogico
-Damas
-225
-51
-Fotografia
-226
-50
-Moda
-Xadrez
-227
-88
-Informitico
-Damas
-Futebol
-228
-81
-Nutricionista
-Futebol
-229
-37
-Cinema
-Damas
-230
-23
-Industrial
-Xadrez
-Futebol
-231
 2
-Civil
-Damas
-Tenis
-Futebol
-232
-54
-Teatro
-Futebol
-233
-51
-Fisioterapeuta
-Xadrez
-Tenis
-234
-47
-Recepcionista
-Futebol
-235
-23
-Cinema
-Damas
-Tenis
-236
-35
-Bartender
-Damas
-237
-11
-Fisico
-Xadrez
-Tenis
-238
-3
+Medico
+222
+13
 Jornalismo
 Xadrez
-Damas
-Tenis
-239
-71
+223
+43
 Recepcionista
 Damas
+224
+10
+Jornalismo
+Xadrez
+Tenis
+225
+77
+Geografo
+Damas
 Futebol
-240
-54
+226
+33
 Fisico
-241
-45
-Recepcionista
+227
+2
+Moda
+228
+96
+Cinema
 Xadrez
-242
-75
-Enfermeio
-243
-23
-Psicologo
+Damas
+229
+76
+Biologo
 Damas
 Tenis
+230
+73
+Matematico
 Futebol
-244
-24
-Industrial
-Xadrez
-Tenis
-245
-35
+231
+61
+Bartender
+232
+69
+Informitico
+Futebol
+233
+68
 Psicologo
-246
-48
-Pedagogico
-247
-31
-Geografo
-248
-46
-Medico
-249
-46
-Geografo
+Damas
+234
+68
+Musica
+235
+34
+Recepcionista
 Xadrez
-250
-41
-Enfermeio
-251
-27
+236
+88
+Jornalismo
+237
+47
+Informitico
+Xadrez
+238
+95
 Danca
 Xadrez
 Damas
-252
-45
-Musica
+239
+71
+Aeronautica
+Tenis
+Futebol
+240
+16
+Matematico
 Xadrez
-Damas
-253
-25
+Tenis
+Futebol
+241
+51
+Bartender
+242
+10
 Jornalismo
-Damas
-254
-7
-Cinema
-Damas
+Xadrez
 Tenis
-255
-84
+243
+24
 Informitico
-Xadrez
+Damas
+244
+66
+Fisioterapeuta
+245
+81
+Teatro
+Damas
 Futebol
-256
-33
-Nutricionista
-Xadrez
-Damas
-257
-14
-Civil
-Tenis
-Futebol
-258
-12
-RelPublicas
-Damas
-259
-39
-Recepcionista
-Damas
-Tenis
-260
-77
+246
+18
+Biologo
+247
+52
 Enfermeio
 Xadrez
-261
+248
+64
+Teatro
+Futebol
+249
 13
-Agente
-Xadrez
-Damas
-262
-58
+Medico
+250
+100
 Quimico
-263
-16
+Xadrez
+251
+92
+Fisioterapeuta
+Damas
+252
+28
+Fotografia
+Xadrez
+253
+32
 Fotografia
 Damas
-264
-73
+Futebol
+254
+39
+Enfermeio
+Tenis
+Futebol
+255
+2
+Biologo
+256
+37
+Nutricionista
+Damas
+Futebol
+257
+98
+Psicologo
+Damas
+Futebol
+258
+100
+Recepcionista
+Damas
+Futebol
+259
+56
+Cinema
+260
+40
+RelPublicas
+Tenis
+Futebol
+261
+5
+Teatro
+262
+10
 Publicidade
+Tenis
+Futebol
+263
+98
+Publicidade
+264
+81
+Matematico
+Xadrez
 Futebol
 265
-63
-Medico
-Damas
-266
-1
-Musica
+51
+Quimico
 Damas
 Tenis
+Futebol
+266
+54
+Quimico
+Damas
+Tenis
+Futebol
 267
-72
-Jornalismo
+20
+Informitico
 Tenis
 Futebol
 268
-3
-Guia
+95
+Biologo
 Xadrez
-Futebol
 269
-54
-Agente
-Damas
+87
+Fisioterapeuta
 Futebol
 270
-98
+39
 Recepcionista
-Xadrez
-271
-63
-Informitico
-272
-28
-Bartender
-Xadrez
-Futebol
-273
-6
-Matematico
-274
-7
-Pedagogico
-Xadrez
-Damas
 Tenis
-275
-56
-Teatro
+Futebol
+271
+23
+Psicologo
 Damas
+272
+96
+Aeronautica
+273
+27
+Publicidade
+Damas
+Futebol
+274
+60
+Danca
+Futebol
+275
+64
+Publicidade
+Tenis
+Futebol
 276
-77
-Quimico
+13
+Industrial
 Damas
 Futebol
 277
-11
-Geografo
-278
-4
-Matematico
-279
-22
-Cinema
-Xadrez
-280
-57
-Teatro
-Tenis
-281
-77
-Pedagogico
-282
 97
-Biologo
-283
-90
-Musica
-284
-20
-Jornalismo
-285
-32
-Geografo
-Futebol
-286
-22
-Medico
-Tenis
-Futebol
-287
-95
-RelPublicas
-Tenis
-288
-76
-Aeronautica
-289
-76
-Bartender
-Xadrez
-Tenis
-290
-37
-Aeronautica
+Matematico
 Damas
-Tenis
-291
-85
-Informitico
-292
-99
-Pedagogico
-293
+278
+48
+Geografo
+279
 40
 Geografo
-294
-80
-Medico
-Damas
-295
-7
-Nutricionista
-Xadrez
-Futebol
-296
-48
-Jornalismo
-Tenis
-Futebol
-297
-3
-Recepcionista
-Futebol
-298
-38
-Jornalismo
-299
-41
+280
+86
 Teatro
-300
-4
-Bartender
-301
-12
-Guia
-Futebol
-302
-79
-Biologo
-Xadrez
-303
-42
-Musica
-Xadrez
-304
-62
-Informitico
-Xadrez
-Futebol
-305
-18
-Teatro
-Xadrez
-306
-49
-Civil
 Damas
-307
-68
-Fotografia
-Tenis
-308
-74
-Geografo
-Xadrez
-309
-8
-Moda
-Tenis
-310
-9
-Industrial
-Xadrez
-311
-100
-Nutricionista
-Xadrez
-312
-53
-Psicologo
-Tenis
-313
-72
-Agente
-314
-75
-Bartender
+281
+69
+RelPublicas
 Xadrez
 Damas
 Tenis
-315
-68
-Danca
-316
-48
-Publicidade
-317
-57
-Geografo
-Futebol
-318
-16
+282
+71
 LocRadio
-Xadrez
-Futebol
-Min, Max Lugares : 16, 18
+283
 41
-Min, Max Lugares : 16, 18
-57
-93
-158
-208
-225
-Min, Max Lugares : 16, 18
-189
-254
-Min, Max Lugares : 16, 18
+Fisioterapeuta
+Tenis
+Futebol
+284
+76
+Nutricionista
+Tenis
+Min, Max Lugares : 8, 10
+Aval(%) : 0.004842615012106538, Pen(%) : 70.0
+2
+3
+4
+5
+6
+7
+9
+10
+11
+12
+13
+14
+16
+17
+18
+19
+20
+21
+23
+24
+25
+26
+27
+28
+30
+31
+33
+34
+35
+37
+38
+39
+40
+41
+42
+44
+45
+46
+47
+48
+49
+51
+52
+53
+54
+55
+56
+58
+59
+60
+61
+62
+63
+65
+66
+67
+68
+69
+70
+72
+73
+74
+75
+76
+77
+79
+80
+81
+82
+83
 84
 86
-228
-Min, Max Lugares : 16, 17
-287
-293
-Min, Max Lugares : 16, 17
-58
-195
-295
-Min, Max Lugares : 16, 17
-107
-Min, Max Lugares : 16, 17
-6
-Min, Max Lugares : 16, 17
-40
-151
-184
-Min, Max Lugares : 16, 17
-1
-48
-236
-238
-262
-Min, Max Lugares : 16, 17
-19
-Min, Max Lugares : 16, 17
-280
-300
-311
-Min, Max Lugares : 16, 17
-70
-260
-Min, Max Lugares : 16, 17
-91
-101
-Min, Max Lugares : 4, 6
-46
 87
-242
-Min, Max Lugares : 4, 6
-23
-110
-119
-172
-297
-Min, Max Lugares : 4, 6
-83
-129
-137
-214
-231
-Min, Max Lugares : 4, 6
-249
-298
-Min, Max Lugares : 4, 6
-123
-Min, Max Lugares : 4, 6
-153
-206
-Min, Max Lugares : 8, 19
-10
-26
-144
-276
-309
-315
-Min, Max Lugares : 8, 19
-97
-134
-220
-232
-Min, Max Lugares : 8, 19
-136
-148
-174
-Min, Max Lugares : 8, 19
-98
-Min, Max Lugares : 8, 19
-69
-308
-310
-Min, Max Lugares : 7, 11
-85
-102
-205
-Min, Max Lugares : 7, 11
-9
-Min, Max Lugares : 7, 11
-25
-68
-Min, Max Lugares : 7, 11
-80
-164
-203
-212
-Min, Max Lugares : 7, 11
-34
-294
-Min, Max Lugares : 7, 11
-239
-Min, Max Lugares : 7, 11
-2
-61
-66
-150
-182
-Min, Max Lugares : 7, 11
-127
-237
-241
-258
-Min, Max Lugares : 7, 11
-317
-Min, Max Lugares : 3, 11
-126
-173
-192
-218
-Min, Max Lugares : 3, 11
-154
-197
-Min, Max Lugares : 3, 11
-71
-Min, Max Lugares : 3, 11
-55
-278
-Min, Max Lugares : 3, 11
-108
-202
-263
-312
-Min, Max Lugares : 3, 11
-269
-Min, Max Lugares : 6, 11
-8
-64
-170
-Min, Max Lugares : 6, 11
-24
-77
-106
-176
-247
-Min, Max Lugares : 6, 11
-12
 88
-125
-149
-165
-316
-Min, Max Lugares : 6, 11
-100
-Min, Max Lugares : 6, 11
-Min, Max Lugares : 6, 11
-131
-Min, Max Lugares : 6, 11
-27
-194
-306
-Min, Max Lugares : 7, 14
-3
-209
-Min, Max Lugares : 7, 14
-51
-246
-Min, Max Lugares : 7, 14
-56
-72
-248
-256
-271
-Min, Max Lugares : 7, 14
-163
-289
-Min, Max Lugares : 7, 14
-116
-190
-213
-Min, Max Lugares : 15, 16
-16
-104
-193
-Min, Max Lugares : 15, 16
-Min, Max Lugares : 15, 16
-44
-130
-Min, Max Lugares : 15, 16
-29
-156
-277
-Min, Max Lugares : 6, 7
-Min, Max Lugares : 6, 7
-Min, Max Lugares : 6, 7
-Min, Max Lugares : 6, 7
-67
-103
-240
-273
-Min, Max Lugares : 6, 7
-221
-Min, Max Lugares : 6, 7
-5
-147
-257
-Min, Max Lugares : 6, 7
-Min, Max Lugares : 9, 10
-252
-Min, Max Lugares : 9, 10
-115
-233
-250
-251
-291
-Min, Max Lugares : 9, 10
-96
-132
-302
-Min, Max Lugares : 9, 10
-279
-283
-307
-Min, Max Lugares : 9, 10
-49
-90
-109
-111
-178
-Min, Max Lugares : 9, 10
-32
-59
-73
-161
-Min, Max Lugares : 9, 10
-82
-Min, Max Lugares : 9, 10
-120
-160
-243
-270
-Min, Max Lugares : 9, 10
-180
-234
-Min, Max Lugares : 9, 10
-42
-219
-292
-Min, Max Lugares : 11, 18
-45
-53
-78
-211
-Min, Max Lugares : 11, 18
-118
-274
-Min, Max Lugares : 11, 18
-36
-162
-Min, Max Lugares : 11, 18
-22
-81
-105
-186
-284
-296
-Min, Max Lugares : 11, 18
-255
-313
-Min, Max Lugares : 11, 18
-63
-124
-286
-Min, Max Lugares : 18, 20
-75
-Min, Max Lugares : 18, 20
 89
-245
-Min, Max Lugares : 18, 20
-Min, Max Lugares : 18, 20
+90
+91
+93
 94
-187
-201
-Min, Max Lugares : 18, 20
-282
-Min, Max Lugares : 18, 20
-128
-207
-Min, Max Lugares : 18, 20
-226
-267
-Min, Max Lugares : 18, 20
-21
-135
-191
-216
-253
-Min, Max Lugares : 16, 19
-7
-121
-Min, Max Lugares : 16, 19
-28
-138
-166
-169
-Min, Max Lugares : 16, 19
-17
-35
-Min, Max Lugares : 16, 19
-114
-143
-146
-290
-Min, Max Lugares : 16, 19
-Min, Max Lugares : 16, 19
-30
-92
-181
-Min, Max Lugares : 16, 19
-4
-60
-188
-Min, Max Lugares : 1, 15
-141
-142
-224
-Min, Max Lugares : 1, 15
-259
-301
-Min, Max Lugares : 1, 15
-79
-185
-314
-Min, Max Lugares : 1, 15
-38
-76
 95
-227
-265
-Min, Max Lugares : 1, 15
-18
-37
-47
-99
-167
-215
-285
-Min, Max Lugares : 1, 15
-50
-198
-235
-Min, Max Lugares : 1, 15
-15
-175
-Min, Max Lugares : 1, 15
-304
-Min, Max Lugares : 1, 15
+96
+97
+98
+100
+101
+102
+103
+104
+105
+107
+108
+109
+110
+111
+112
+114
+115
+116
 117
-229
-266
-318
-Min, Max Lugares : 6, 8
-65
-159
-183
-Min, Max Lugares : 6, 8
-54
+118
+119
+121
 122
-Min, Max Lugares : 6, 8
-230
-275
-Min, Max Lugares : 6, 8
-Min, Max Lugares : 6, 8
+123
+124
+125
+126
+128
+129
+130
+131
+132
 133
+135
+136
+137
+138
+139
+140
+142
+143
+144
+145
+146
+147
+149
+150
+151
+152
+153
+154
+156
 157
+158
+159
+160
+161
+163
+164
+165
+166
+167
+168
+170
+171
+172
+173
+174
+175
+177
+178
+179
+180
+181
+182
+184
+185
+186
+187
+188
+189
+191
+192
+193
+194
+195
+196
+198
 199
 200
-222
-Min, Max Lugares : 6, 8
-299
-Min, Max Lugares : 6, 8
-223
-Min, Max Lugares : 12, 15
-177
-217
-Min, Max Lugares : 12, 15
-Min, Max Lugares : 12, 15
-31
-204
-272
-Min, Max Lugares : 12, 15
-74
-Min, Max Lugares : 15, 17
-13
-168
-Min, Max Lugares : 15, 17
-140
+201
+202
+203
+205
+206
+207
+208
+209
 210
-Min, Max Lugares : 15, 17
-152
-Min, Max Lugares : 15, 17
-11
-20
-52
-112
-Min, Max Lugares : 15, 17
-305
-Min, Max Lugares : 15, 17
-14
-139
-268
-Min, Max Lugares : 15, 17
-62
-113
-264
-Min, Max Lugares : 15, 17
-171
-288
-303
-Min, Max Lugares : 15, 17
-39
-Min, Max Lugares : 15, 17
-Min, Max Lugares : 9, 13
-196
-Min, Max Lugares : 9, 13
-33
-Min, Max Lugares : 9, 13
-Min, Max Lugares : 9, 13
-Min, Max Lugares : 9, 13
-Min, Max Lugares : 9, 13
-43
-Min, Max Lugares : 9, 13
-Min, Max Lugares : 9, 12
-155
-179
+212
+213
+214
+215
+216
+217
+219
+220
+221
+222
+223
+224
+226
+227
+228
+229
+230
+231
+233
+234
+235
+236
+237
+238
+240
+241
+242
+243
 244
-281
-Min, Max Lugares : 9, 12
-Min, Max Lugares : 9, 12
+245
+247
+248
+249
+250
+251
+252
+254
+255
+256
+257
+258
+259
 261
+262
+263
+264
+265
+266
+268
+269
+270
+271
+272
+273
+275
+276
+277
+278
+279
+280
+282
+283
+284
+Min, Max Lugares : 8, 10
+Aval(%) : 115.0, Pen(%) : 6.0
+32
+57
+Min, Max Lugares : 8, 10
+Aval(%) : 100.0, Pen(%) : 7.0
+260
+Min, Max Lugares : 8, 10
+Aval(%) : 65.0, Pen(%) : 8.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 19
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 15, 16
+Aval(%) : 65.0, Pen(%) : 15.0
+Min, Max Lugares : 15, 16
+Aval(%) : 65.0, Pen(%) : 15.0
+Min, Max Lugares : 15, 16
+Aval(%) : 65.0, Pen(%) : 15.0
+Min, Max Lugares : 15, 16
+Aval(%) : 100.0, Pen(%) : 14.0
+267
+Min, Max Lugares : 15, 16
+Aval(%) : 65.0, Pen(%) : 15.0
+Min, Max Lugares : 2, 11
+Aval(%) : 105.49180327868852, Pen(%) : 0.0
+71
+106
+127
+Min, Max Lugares : 2, 11
+Aval(%) : 65.0, Pen(%) : 2.0
+Min, Max Lugares : 2, 11
+Aval(%) : 100.0, Pen(%) : 1.0
+155
+Min, Max Lugares : 13, 16
+Aval(%) : 65.0, Pen(%) : 13.0
+Min, Max Lugares : 13, 16
+Aval(%) : 65.0, Pen(%) : 12.0
+218
+Min, Max Lugares : 13, 16
+Aval(%) : 105.3529411764706, Pen(%) : 9.0
+22
+29
+85
+113
+176
+Min, Max Lugares : 13, 16
+Aval(%) : 65.0, Pen(%) : 13.0
+Min, Max Lugares : 13, 16
+Aval(%) : 65.0, Pen(%) : 13.0
+Min, Max Lugares : 13, 16
+Aval(%) : 65.0, Pen(%) : 12.0
+274
+Min, Max Lugares : 13, 16
+Aval(%) : 65.0, Pen(%) : 13.0
+Min, Max Lugares : 17, 20
+Aval(%) : 65.0, Pen(%) : 17.0
+Min, Max Lugares : 17, 20
+Aval(%) : 70.75, Pen(%) : 14.0
+92
+204
+232
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 20
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 6, 17
+Aval(%) : 65.0, Pen(%) : 6.0
+Min, Max Lugares : 6, 17
+Aval(%) : 100.0, Pen(%) : 6.0
+197
+Min, Max Lugares : 6, 17
+Aval(%) : 65.0, Pen(%) : 5.0
+148
+Min, Max Lugares : 6, 17
+Aval(%) : 65.0, Pen(%) : 5.0
+50
+Min, Max Lugares : 6, 17
+Aval(%) : 65.0, Pen(%) : 6.0
+43
+Min, Max Lugares : 6, 17
+Aval(%) : 65.0, Pen(%) : 6.0
+Min, Max Lugares : 6, 17
+Aval(%) : 135.0, Pen(%) : 5.0
+281
+Min, Max Lugares : 6, 17
+Aval(%) : 65.0, Pen(%) : 5.0
+78
+Min, Max Lugares : 16, 18
+Aval(%) : 70.9375, Pen(%) : 14.0
+134
+253
+Min, Max Lugares : 16, 18
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 18
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 18
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 16, 18
+Aval(%) : 65.0, Pen(%) : 16.0
+Min, Max Lugares : 7, 18
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 18
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 18
+Aval(%) : 100.0, Pen(%) : 6.0
+162
+Min, Max Lugares : 7, 18
+Aval(%) : 65.0, Pen(%) : 6.0
+211
+Min, Max Lugares : 7, 18
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 18
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 18
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 18
+Aval(%) : 135.0, Pen(%) : 6.0
+169
+Min, Max Lugares : 7, 18
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 14, 19
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 14, 19
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 14, 19
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 14, 19
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 14, 19
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 14, 19
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 11, 12
+Aval(%) : 65.0, Pen(%) : 11.0
+Min, Max Lugares : 11, 12
+Aval(%) : 65.0, Pen(%) : 11.0
+Min, Max Lugares : 11, 12
+Aval(%) : 140.56603773584905, Pen(%) : 10.0
+1
+239
+Min, Max Lugares : 11, 12
+Aval(%) : 65.0, Pen(%) : 11.0
+Min, Max Lugares : 11, 12
+Aval(%) : 100.0, Pen(%) : 10.0
+64
+Min, Max Lugares : 11, 12
+Aval(%) : 30.0, Pen(%) : 10.0
+246
+Min, Max Lugares : 11, 12
+Aval(%) : 65.0, Pen(%) : 11.0
+Min, Max Lugares : 11, 12
+Aval(%) : 65.0, Pen(%) : 11.0
+Min, Max Lugares : 11, 12
+Aval(%) : 100.0, Pen(%) : 10.0
+225
+Min, Max Lugares : 11, 12
+Aval(%) : 65.0, Pen(%) : 11.0
+Min, Max Lugares : 7, 10
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 10
+Aval(%) : 65.0, Pen(%) : 6.0
+141
+Min, Max Lugares : 7, 10
+Aval(%) : 39.285714285714285, Pen(%) : 5.0
+36
+99
+Min, Max Lugares : 7, 10
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 10
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 10
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 7, 10
+Aval(%) : 65.0, Pen(%) : 7.0
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 19
+Aval(%) : 105.9090909090909, Pen(%) : 16.0
+183
+190
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 18.0
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 17.0
+15
+Min, Max Lugares : 18, 19
+Aval(%) : 65.0, Pen(%) : 18.0
 Min, Max Lugares : 9, 12
-145
+Aval(%) : 135.0, Pen(%) : 8.0
+120
+Min, Max Lugares : 9, 12
+Aval(%) : 65.0, Pen(%) : 9.0
+Min, Max Lugares : 14, 16
+Aval(%) : 100.0, Pen(%) : 13.0
+8
+Min, Max Lugares : 14, 16
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 14, 16
+Aval(%) : 65.0, Pen(%) : 14.0
+Min, Max Lugares : 14, 16
+Aval(%) : 65.0, Pen(%) : 14.0

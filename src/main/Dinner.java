@@ -170,6 +170,7 @@ public class Dinner {
 		
 		for(int i = 0; i < bestSolution.length; i++){
 			br.write("Min, Max Lugares : " + bestSolution[i].getMinSeats() + ", " + bestSolution[i].getMaxSeats() + "\n");
+			br.write("Aval(%) : " + bestSolution[i].getAvaliacao() + ", Pen(%) : " + bestSolution[i].getPenalizacao() + "\n");
 			for(int j = 0; j < bestSolution[i].getSeatPeople().size(); j++){
 				br.write(bestSolution[i].getSeatPeople().get(j).getID() + "\n");
 			}

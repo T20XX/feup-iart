@@ -34,7 +34,10 @@ public class Table {
 		for(Person person : seatPeople){
 			totalAge += person.getAge();
 		}
+		if(seatPeople.size() != 0){
 		avgAge = totalAge / seatPeople.size();
+		}
+		else avgAge = 0;
 		for(Person person : seatPeople){
 			difAge += Math.abs(person.getAge() - avgAge);
 		}
