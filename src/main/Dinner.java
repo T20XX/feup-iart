@@ -1,9 +1,11 @@
 package main;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import algorithms.GeneticAlgorithm;
@@ -14,7 +16,7 @@ import entities.Profession;
 import entities.Table;
 
 public class Dinner {
-	
+
 	public static final String FS = System.getProperty("file.separator");
 
 	public static Person people[];
@@ -27,15 +29,17 @@ public class Dinner {
 			System.out.println("Usage: Dinner <Input Tables File> <Generate People File> <Output File>");
 			return;
 		}
+		PrintStream out = new PrintStream(new FileOutputStream("log.txt"));
+		System.setOut(out);
 		String tablesPath = args[0];
 		String peoplePath = args[1];
 		String outputPath = args[2];
-		
+
 		if(!parseTables(tablesPath)){
 			System.out.println("Unable to parse tables file.");
 			return;
 		}
-		
+
 		if(!parsePeople(peoplePath)){
 			System.out.println("Unable to parse tables file.");
 			return;
@@ -58,9 +62,9 @@ public class Dinner {
 				}
 			}
 		}		
-		
-		bestSolution = GeneticAlgorithm.execute(4, 1);
-		
+
+		bestSolution = GeneticAlgorithm.execute(50, 1);
+
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);
 	}	
@@ -68,18 +72,18 @@ public class Dinner {
 	private static boolean parseTables(String path){
 
 		ArrayList<Table> tmpTables = new ArrayList<Table>();
-		
+
 		BufferedReader brTable = null;
 		FileReader frTable = null;
-		
+
 		try {
 			frTable = new FileReader(path);
 			brTable = new BufferedReader(frTable);	
-			
+
 			String nTables;
 			int minSeats;
 			int maxSeats;
-			
+
 			while((nTables = brTable.readLine()) != null){
 				minSeats = Integer.parseInt(brTable.readLine());
 				maxSeats = Integer.parseInt(brTable.readLine());
@@ -93,10 +97,10 @@ public class Dinner {
 			e.printStackTrace();
 			return false;
 		}
-		
+
 		emptyTables = new Table[tmpTables.size()];
 		tmpTables.toArray(emptyTables);
-		
+
 		return true;
 	}
 	private static boolean parsePeople(String path){
@@ -106,12 +110,12 @@ public class Dinner {
 
 		BufferedReader brPeople = null;
 		FileReader frPeople = null;
-		
+
 		try {
 
 			frPeople = new FileReader(path);
 			brPeople = new BufferedReader(frPeople);	
-			
+
 			String nPeople;
 			int nPeoplei;
 			int age;
@@ -119,7 +123,7 @@ public class Dinner {
 			int nHobbies;
 			Hobby[] tmpHobbies;
 			Person[] tmpPeople;
-			
+
 			while((nPeople = brPeople.readLine()) != null){
 				nPeoplei = Integer.parseInt(nPeople);
 				tmpPeople = new Person[nPeoplei];
@@ -138,45 +142,50 @@ public class Dinner {
 					groupsFinal.add(new Group(tmpPeople));
 				}
 			}
-			
+
 			brPeople.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 			return false;
 		}
-		
+
 		people = new Person[peopleFinal.size()];
 		peopleFinal.toArray(people);
 		groups = new Group[groupsFinal.size()];
 		groupsFinal.toArray(groups);
-		
+
 		return true;
 	}
-	
 
-	
+
+
 	private static void writeOutput(Table[] bestSolution, String outputPath) throws IOException {
 		BufferedWriter br = null;
 		FileWriter fr = null;
 		fr = new FileWriter(outputPath);
 		br = new BufferedWriter(fr);
+
+		br.write(String.format("| %4s | %3s | %15s | %5s| %50s |\n", "ID", "Age", "Profession", "Group", "Hobbies"));
 		
 		for(Person person : people){
-			br.write(person.getID() + "\n" + person.getAge() + "\n" + person.getProfession() + "\n");
+			br.write(String.format("| %4s | %3s | %15s | %4s | ", person.getID(), person.getAge(), person.getProfession(),person.getGroup()!= null ? person.getGroup().getID() : "null"));
 			for(Hobby hobby : person.getHobbies()){
-				br.write(hobby + "\n");
+				br.write(hobby + ",");
 			}
+			br.write("|\n");
 		}
-		
+
 		for(int i = 0; i < bestSolution.length; i++){
-			br.write("Min, Max Lugares : " + bestSolution[i].getMinSeats() + ", " + bestSolution[i].getMaxSeats() + "\n");
-			br.write("Aval(%) : " + bestSolution[i].getAvaliacao() + ", Pen(%) : " + bestSolution[i].getPenalizacao() + "\n");
-			for(int j = 0; j < bestSolution[i].getSeatPeople().size(); j++){
-				br.write(bestSolution[i].getSeatPeople().get(j).getID() + "\n");
+			if(bestSolution[i].getSeatPeople().size() != 0) {
+				br.write("Min, Max Lugares : " + bestSolution[i].getMinSeats() + ", " + bestSolution[i].getMaxSeats() + "\n");
+				br.write("Aval(%) : " + bestSolution[i].getAvaliacao() + ", Pen(%) : " + bestSolution[i].getPenalizacao() + "\n");
+				for(int j = 0; j < bestSolution[i].getSeatPeople().size(); j++){
+					br.write(bestSolution[i].getSeatPeople().get(j).getID() + "\n");
+				}
 			}
 		}
 		br.close();
 		fr.close();
 	}
-	
+
 }

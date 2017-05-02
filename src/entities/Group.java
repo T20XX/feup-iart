@@ -15,6 +15,10 @@ public class Group {
 		nextID++;
 	}
 	
+	public int getID(){
+		return this.id;
+	}
+	
 	public Person[] getMembers(){
 		return this.members;
 	}

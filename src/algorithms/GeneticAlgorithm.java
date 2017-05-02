@@ -18,7 +18,7 @@ public class GeneticAlgorithm {
 	private static int nBitsTotal;
 	private static int CROSSOVER_PROB = 50; //in 100
 	private static int MUTATION_PROB = 1; //in 10000
-	private static int MAX_LOOPS_WO_EVOLUTION = 500;
+	private static int MAX_LOOPS_WO_EVOLUTION = 1000;
 
 	public static final Table[] execute(int populationSize, int eliteSelection){
 		//TODO receber config por parametros
@@ -38,10 +38,10 @@ public class GeneticAlgorithm {
 		double bestAvaliation = 0;
 		int loopsWoEvolution = 0;
 
-		for(BitSet chromosome : chromosomes){
+		/*for(BitSet chromosome : chromosomes){
 			System.out.println(chromosome.toString());
 			System.out.println(bitSetToInt(chromosome)[0]);
-		}
+		}*/
 
 
 
@@ -69,7 +69,7 @@ public class GeneticAlgorithm {
 					bestGenerationIndex = nSolution;
 				}
 				//Debug
-				System.out.println(chromosomeToString(chromosomes[nSolution]));
+				//System.out.println(chromosomeToString(chromosomes[nSolution]));
 				System.out.println(avaliations[nSolution]);
 			}
 
@@ -78,7 +78,7 @@ public class GeneticAlgorithm {
 			System.out.println("PROBS\n0");
 			for(int nSolution = 1; nSolution <= populationSize; nSolution++){
 				selectProbs[nSolution] = selectProbs[nSolution-1] + (avaliations[nSolution-1] / totalAvaliation);
-				System.out.println(selectProbs[nSolution]);
+				//System.out.println(selectProbs[nSolution]);
 			}
 
 			BitSet[] tmpChromosomes = new BitSet[populationSize];
@@ -108,7 +108,7 @@ public class GeneticAlgorithm {
 				} else {
 					break;
 				}
-				System.out.println(pairList);
+				//System.out.println(pairList);
 				crossoverChromosomes = crossover(chromosomes[value1],chromosomes[value2]);
 				tmpChromosomes[nSolution] = crossoverChromosomes[0];
 				tmpChromosomes[nSolution+1] = crossoverChromosomes[1];
@@ -132,13 +132,13 @@ public class GeneticAlgorithm {
 		for(int i = 0; i < nBitsTotal; i+=nBitsPerTable){
 			if(r.nextInt(100) < CROSSOVER_PROB){
 				for(int j= 0; j < nBitsPerTable; j++){
-					result[0].set(i*nBitsPerTable + j,chromosome1.get(i*nBitsPerTable + j));
-					result[1].set(i*nBitsPerTable + j,chromosome2.get(i*nBitsPerTable + j));
+					result[0].set(i + j,chromosome1.get(i + j));
+					result[1].set(i + j,chromosome2.get(i + j));
 				}
 			} else {
 				for(int j= 0; j < nBitsPerTable; j++){
-					result[0].set(i*nBitsPerTable + j,chromosome2.get(i*nBitsPerTable + j));
-					result[1].set(i*nBitsPerTable + j,chromosome1.get(i*nBitsPerTable + j));
+					result[0].set(i + j,chromosome2.get(i + j));
+					result[1].set(i + j,chromosome1.get(i + j));
 				}
 			}
 		}
@@ -148,16 +148,19 @@ public class GeneticAlgorithm {
 
 	private static int selectRandomIndex(double[] selectProbs) {
 		double r = Math.random();
-		int aux = (int) Math.floor(selectProbs.length/2);
-		int index = aux;
-		System.out.println(r);
+		//int aux = (int) Math.floor(selectProbs.length/2);
+		//int index = aux;
+		int index = 0;
+		//System.out.println(r);
 		while(r < selectProbs[index] || r >= selectProbs[index + 1]){
-			if(r < selectProbs[index]){
+			index++;
+			/*if(r < selectProbs[index]){
 				index -= aux;
 			} else if (r >= selectProbs[index + 1]){
 				index += aux;
 			}
 			aux /= 2;
+			System.out.println(aux);*/
 		}
 		System.out.println(index);
 		return index;

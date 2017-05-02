@@ -34,15 +34,17 @@ public class Table {
 		for(Person person : seatPeople){
 			totalAge += person.getAge();
 		}
-		if(seatPeople.size() != 0){
 		avgAge = totalAge / seatPeople.size();
-		}
-		else avgAge = 0;
 		for(Person person : seatPeople){
 			difAge += Math.abs(person.getAge() - avgAge);
 		}
-		afinidadeEtaria = (1/(difAge + 1))*100;
-		return afinidadeEtaria;
+		//afinidadeEtaria = (1/(difAge + 1))*100;
+		afinidadeEtaria = 100 - difAge;
+		if(afinidadeEtaria < 0){
+			return 0;
+		} else {
+			return afinidadeEtaria;
+		}
 	}
 
 	private double getAfinidadeProfissao(){
@@ -79,9 +81,9 @@ public class Table {
 	}
 
 	public double getAvaliacao(){
-		return 0.3 * getAfinidadeEtaria()
-				+ 0.35 * getAfinidadeProfissao()
-				+ 0.35 * getAfinidadeHobbies();
+		return 0.3 * getAfinidadeEtaria();
+		//+ 0.35 * getAfinidadeProfissao()
+		//+ 0.35 * getAfinidadeHobbies();
 	}
 
 	public double getPenalizacao(){
@@ -114,7 +116,7 @@ public class Table {
 		} else if(nPeople > max){
 			penalizacao += (totalGroups - max);
 		}
-		return penalizacao;
+		return penalizacao * 2;
 	}
 
 	public static double getAvaliacaoRoom(Table tables[]){
@@ -123,7 +125,10 @@ public class Table {
 
 		for(Table table: tables){
 			if(table.getSeatPeople().size() > 0){
-				result += (table.getAvaliacao() - table.getPenalizacao());
+				double tmpAvaliation = table.getAvaliacao() - table.getPenalizacao();
+				if(tmpAvaliation > 0) {
+				result += tmpAvaliation;
+				}
 				usedTables++;
 			}
 		}
