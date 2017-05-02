@@ -1,6 +1,8 @@
 package main;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -18,6 +20,7 @@ public class Dinner {
 	public static Person people[];
 	public static Group groups[];
 	public static Table emptyTables[];
+	public static Table bestSolution[];
 
 	public static void main(String[] args) throws IOException {
 		if(args.length != 3){
@@ -56,7 +59,7 @@ public class Dinner {
 			}
 		}		
 		
-		Table[] bestSolution = GeneticAlgorithm.execute(4, 1);
+		bestSolution = GeneticAlgorithm.execute(4, 1);
 		
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);
@@ -152,9 +155,27 @@ public class Dinner {
 	
 
 	
-	private static void writeOutput(Table[] bestSolution, String outputPath) {
-		// TODO Auto-generated method stub
+	private static void writeOutput(Table[] bestSolution, String outputPath) throws IOException {
+		BufferedWriter br = null;
+		FileWriter fr = null;
+		fr = new FileWriter(outputPath);
+		br = new BufferedWriter(fr);
 		
+		for(Person person : people){
+			br.write(person.getID() + "\n" + person.getAge() + "\n" + person.getProfession() + "\n");
+			for(Hobby hobby : person.getHobbies()){
+				br.write(hobby + "\n");
+			}
+		}
+		
+		for(Table table : bestSolution){
+			br.write("Min, Max Lugares : " + table.getMinSeats() + ", " + table.getMaxSeats() + "\n");
+			for(int i = 0; i < table.getSeatPeople().size(); i++){
+				br.write(table.getSeatPeople().get(i).getID() + "\n");
+			}
+		}
+		br.close();
+		fr.close();
 	}
 	
 }
