@@ -2,15 +2,26 @@ package entities;
 
 public class Person {
 	
+	private static int nextID = 1;
+	private int id;
 	private int age;
 	private Profession profession;
 	private Hobby[] hobbies;
 	private Group group = null;
 	
 	public Person(int age, Profession profession, Hobby[] hobbies){
+		this.id = nextID;
 		this.age = age;
 		this.profession = profession;
 		this.hobbies = hobbies;
+		nextID++;
+	}
+
+	public int getID() {
+		return id;
+	}
+	public void setID(int id) {
+		this.id = id;
 	}
 	
 	public int getAge() {

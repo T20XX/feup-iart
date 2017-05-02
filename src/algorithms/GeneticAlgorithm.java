@@ -18,7 +18,7 @@ public class GeneticAlgorithm {
 	private static int nBitsTotal;
 	private static int CROSSOVER_PROB = 50; //in 100
 	private static int MUTATION_PROB = 1; //in 10000
-	private static int MAX_LOOPS_WO_EVOLUTION = 2;
+	private static int MAX_LOOPS_WO_EVOLUTION = 500;
 
 	public static final Table[] execute(int populationSize, int eliteSelection){
 		//TODO receber config por parametros
@@ -121,6 +121,7 @@ public class GeneticAlgorithm {
 			}
 
 		}
+		System.out.println("BEST AVALIATION : " + bestAvaliation);
 		return bestSolution;
 	}
 

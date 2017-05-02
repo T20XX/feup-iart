@@ -89,22 +89,23 @@ public class Table {
 		for(Person person : seatPeople){
 			Group group = person.getGroup();
 			if(group != null){
-			Integer count = groupsTable.get(group);
-			if(count == null){
-				groupsTable.put(group, 1);
-			} else {
-				groupsTable.put(group, count + 1);
-			}
+				Integer count = groupsTable.get(group);
+				if(count == null){
+					groupsTable.put(group, 1);
+				} else {
+					groupsTable.put(group, count + 1);
+				}
 			}
 		}
 		int totalGroups = groupsTable.size();
 		for (Map.Entry<Group, Integer> entry : groupsTable.entrySet()){
 			int totalMembers = ((Group)entry.getKey()).getMembers().length;
 			int membersTable = entry.getValue();
-			penalizacao += totalMembers -(membersTable/totalMembers)*totalGroups;
+			penalizacao += (1 - membersTable/totalMembers)/(totalMembers*totalGroups) * 100;
+			//penalizacao += totalMembers -(membersTable/totalMembers)*totalGroups;
 		}
 
-			
+
 		if(nPeople < min){
 			penalizacao += (min - totalGroups);
 		} else if(nPeople > max){
@@ -119,15 +120,15 @@ public class Table {
 
 		for(Table table: tables){
 			if(table.getSeatPeople().size() > 0){
-			result += (table.getAvaliacao() );//- table.getPenalizacao());
-			usedTables++;
+				result += (table.getAvaliacao() - table.getPenalizacao());
+				usedTables++;
 			}
 		}
 		result /= usedTables;
 
 		return result;
 	}
-	
+
 	public ArrayList<Person> getSeatPeople() {
 		return seatPeople;
 	}
@@ -135,13 +136,13 @@ public class Table {
 	public void addPerson(Person p){
 		seatPeople.add(p);
 	}
-	
+
 	public Person removePerson(int index){
 		Person p = seatPeople.get(index);
 		seatPeople.remove(index);
 		return p;
 	}
-	
+
 	public int getMinSeats(){
 		return this.min;
 	}
