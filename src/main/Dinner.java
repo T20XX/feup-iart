@@ -63,7 +63,7 @@ public class Dinner {
 			}
 		}		
 
-		bestSolution = GeneticAlgorithm.execute(50, 1);
+		bestSolution = GeneticAlgorithm.execute(20, 1);
 
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);
