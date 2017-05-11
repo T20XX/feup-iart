@@ -14,31 +14,33 @@ import main.Dinner;
 
 public class SimulatedAnnealingAlgorithm {
 
-	public static final Table[] execute(int maxLoopsWoEvolution){
+	public static final Table[] execute(int maxLoopsWoEvolution, double temp){
 		Table solution[] = randomInitialSolution();
 		double avaliation = Table.getAvaliacaoRoom(solution);
 		double diffAvaliation = 0;
+		double alpha = 0.05;
 
 		Table bestSolution[] = solution;
 		double bestAvaliation = avaliation;
 		int loopsWoEvolution = 0;
-
+		Random rand = new Random();
+		int random;
+		//random.nextInt(max - min + 1) + min
 		while(loopsWoEvolution < maxLoopsWoEvolution){
 			loopsWoEvolution++;
-
+			random = rand.nextInt(1-0+1);
 			solution = generateNextSolution(bestSolution);
 			avaliation = Table.getAvaliacaoRoom(solution);
 			diffAvaliation = avaliation - bestAvaliation;
 
-			if(diffAvaliation > 0){
+			if(diffAvaliation > 0 || (Math.exp(diffAvaliation/temp) > random)) {
 				bestSolution = solution;
 				bestAvaliation = avaliation;
 				loopsWoEvolution = 0;
 			} else {
 				//TODO TEMPERATURA
 			}
-
-
+			temp = temp * alpha;
 		}
 		return bestSolution;
 	}
@@ -46,12 +48,12 @@ public class SimulatedAnnealingAlgorithm {
 	private static Table[] generateNextSolution(Table[] bestSolution) {
 		Table[] nextSolution = new Table[bestSolution.length];
 		for(int i = 0; i < nextSolution.length; i++){
-			nextSolution[i] = new Table(bestSolution[i]);
+			nextSolution[i] = new Table(bestSolution[i], bestSolution[i].getSeatPeople());
 		}
-
 		//Remover pessoa de uma mesa e adicionar em outra
 		Random r = new Random();
 		int tableIndex = r.nextInt(bestSolution.length);
+		System.out.println(tableIndex + " " + nextSolution[tableIndex].getSeatPeople().size());
 		int personIndex = r.nextInt(nextSolution[tableIndex].getSeatPeople().size());
 		Person person = nextSolution[tableIndex].removePerson(personIndex);
 		tableIndex = r.nextInt(bestSolution.length);

@@ -9,6 +9,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import algorithms.GeneticAlgorithm;
+import algorithms.SimulatedAnnealingAlgorithm;
 import entities.Group;
 import entities.Hobby;
 import entities.Person;
@@ -63,7 +64,7 @@ public class Dinner {
 			}
 		}		
 
-		bestSolution = GeneticAlgorithm.execute(20, 1);
+		bestSolution = SimulatedAnnealingAlgorithm.execute(20, 10);
 
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);

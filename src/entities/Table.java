@@ -22,7 +22,9 @@ public class Table {
 	public Table(int min, int max, ArrayList<Person> seatPeople) {
 		this.min = min;
 		this.max = max;
-		this.seatPeople = seatPeople;
+		this.seatPeople = (ArrayList<Person>)seatPeople .clone();
+
+		System.out.println("asdasd");
 	}
 
 
@@ -30,6 +32,10 @@ public class Table {
 		this(table.getMinSeats(), table.getMaxSeats());
 	}
 
+	public Table(Table table, ArrayList<Person> seatPeople) {
+		this(table.getMinSeats(), table.getMaxSeats(), seatPeople);
+	}
+	
 	private double getAfinidadeEtaria(){
 		double avgAge = 0, difAge = 0, afinidadeEtaria = 0;
 		int totalAge = 0;
@@ -181,5 +187,4 @@ public class Table {
 	public int getMaxSeats(){
 		return this.max;
 	}
-
 }
