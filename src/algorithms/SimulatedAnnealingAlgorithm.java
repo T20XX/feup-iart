@@ -1,5 +1,8 @@
 package algorithms;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.BitSet;
 import java.util.List;
@@ -14,7 +17,7 @@ import main.Dinner;
 
 public class SimulatedAnnealingAlgorithm {
 
-	public static final Table[] execute(int maxLoopsWoEvolution, double temp){
+	public static final Table[] execute(int maxLoopsWoEvolution, double temp) throws IOException{
 		Table solution[] = randomInitialSolution();
 		double avaliation = Table.getAvaliacaoRoom(solution);
 		double diffAvaliation = 0;
@@ -42,6 +45,8 @@ public class SimulatedAnnealingAlgorithm {
 			}
 			temp = temp * alpha;
 		}
+	
+		
 		return bestSolution;
 	}
 
@@ -53,7 +58,9 @@ public class SimulatedAnnealingAlgorithm {
 		//Remover pessoa de uma mesa e adicionar em outra
 		Random r = new Random();
 		int tableIndex = r.nextInt(bestSolution.length);
-		System.out.println(tableIndex + " " + nextSolution[tableIndex].getSeatPeople().size());
+		while(nextSolution[tableIndex].getSeatPeople().size() == 0){
+			tableIndex = r.nextInt(bestSolution.length);
+		}
 		int personIndex = r.nextInt(nextSolution[tableIndex].getSeatPeople().size());
 		Person person = nextSolution[tableIndex].removePerson(personIndex);
 		tableIndex = r.nextInt(bestSolution.length);

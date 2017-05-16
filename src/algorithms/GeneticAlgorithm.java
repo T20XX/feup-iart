@@ -1,5 +1,8 @@
 package algorithms;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.BitSet;
 import java.util.List;
@@ -18,9 +21,9 @@ public class GeneticAlgorithm {
 	private static int nBitsTotal;
 	private static int CROSSOVER_PROB = 50; //in 100
 	private static int MUTATION_PROB = 1; //in 10000
-	private static int MAX_LOOPS_WO_EVOLUTION = 1000;
+	private static int MAX_LOOPS_WO_EVOLUTION = 5000;
 
-	public static final Table[] execute(int populationSize, int eliteSelection){
+	public static final Table[] execute(int populationSize, int eliteSelection) throws IOException{
 		//TODO receber config por parametros
 		nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
 		nBitsTotal = nBitsPerTable * Dinner.people.length;
@@ -121,7 +124,14 @@ public class GeneticAlgorithm {
 			}
 
 		}
-		System.out.println("BEST AVALIATION : " + bestAvaliation);
+		BufferedWriter br = null;
+		FileWriter fr = null;
+		fr = new FileWriter("output.txt");
+		br = new BufferedWriter(fr);
+		br.write("asdasdsad" + (int) bestAvaliation);
+		br.close();
+		fr.close();		
+				
 		return bestSolution;
 	}
 

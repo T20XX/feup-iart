@@ -64,8 +64,9 @@ public class Dinner {
 			}
 		}		
 
-		bestSolution = SimulatedAnnealingAlgorithm.execute(20, 10);
-
+		//bestSolution = SimulatedAnnealingAlgorithm.execute(1000, 20);
+		bestSolution = GeneticAlgorithm.execute(50, 1);
+		
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);
 	}	
@@ -166,6 +167,7 @@ public class Dinner {
 		fr = new FileWriter(outputPath);
 		br = new BufferedWriter(fr);
 
+		br.write((int)Table.getAvaliacaoRoom(bestSolution)+"\n");
 		br.write(String.format("| %4s | %3s | %15s | %5s| %50s |\n", "ID", "Age", "Profession", "Group", "Hobbies"));
 		
 		for(Person person : people){

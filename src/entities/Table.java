@@ -23,8 +23,6 @@ public class Table {
 		this.min = min;
 		this.max = max;
 		this.seatPeople = (ArrayList<Person>)seatPeople .clone();
-
-		System.out.println("asdasd");
 	}
 
 
