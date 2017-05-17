@@ -21,7 +21,7 @@ public class GeneticAlgorithm {
 	private static int nBitsTotal;
 	private static int CROSSOVER_PROB = 50; //in 100
 	private static int MUTATION_PROB = 1; //in 10000
-	private static int MAX_LOOPS_WO_EVOLUTION = 5000;
+	private static int MAX_LOOPS_WO_EVOLUTION = 1000;
 
 	public static final Table[] execute(int populationSize, int eliteSelection) throws IOException{
 		//TODO receber config por parametros
@@ -124,14 +124,6 @@ public class GeneticAlgorithm {
 			}
 
 		}
-		BufferedWriter br = null;
-		FileWriter fr = null;
-		fr = new FileWriter("output.txt");
-		br = new BufferedWriter(fr);
-		br.write("asdasdsad" + (int) bestAvaliation);
-		br.close();
-		fr.close();		
-				
 		return bestSolution;
 	}
 

@@ -64,8 +64,8 @@ public class Dinner {
 			}
 		}		
 
-		//bestSolution = SimulatedAnnealingAlgorithm.execute(1000, 20);
-		bestSolution = GeneticAlgorithm.execute(50, 1);
+		bestSolution = SimulatedAnnealingAlgorithm.execute(100,0.05);
+		//bestSolution = GeneticAlgorithm.execute(20, 1);
 		
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);

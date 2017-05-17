@@ -17,36 +17,28 @@ import main.Dinner;
 
 public class SimulatedAnnealingAlgorithm {
 
-	public static final Table[] execute(int maxLoopsWoEvolution, double temp) throws IOException{
+	public static final Table[] execute(double temp, double alpha) throws IOException{
 		Table solution[] = randomInitialSolution();
 		double avaliation = Table.getAvaliacaoRoom(solution);
 		double diffAvaliation = 0;
-		double alpha = 0.05;
 
 		Table bestSolution[] = solution;
 		double bestAvaliation = avaliation;
-		int loopsWoEvolution = 0;
 		Random rand = new Random();
 		int random;
 		//random.nextInt(max - min + 1) + min
-		while(loopsWoEvolution < maxLoopsWoEvolution){
-			loopsWoEvolution++;
+		while(temp > 0){
 			random = rand.nextInt(1-0+1);
 			solution = generateNextSolution(bestSolution);
 			avaliation = Table.getAvaliacaoRoom(solution);
 			diffAvaliation = avaliation - bestAvaliation;
 
-			if(diffAvaliation > 0 || (Math.exp(diffAvaliation/temp) > random)) {
+			if(diffAvaliation > 0 || Math.exp(diffAvaliation/temp) > random) {
 				bestSolution = solution;
 				bestAvaliation = avaliation;
-				loopsWoEvolution = 0;
-			} else {
-				//TODO TEMPERATURA
 			}
 			temp = temp * alpha;
 		}
-	
-		
 		return bestSolution;
 	}
 
