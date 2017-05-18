@@ -194,7 +194,7 @@ public class Dinner {
 				br.write("Min, Max Lugares : " + bestSolution[i].getMinSeats() + ", " + bestSolution[i].getMaxSeats() + "\n");
 				br.write("Aval(%) : " + bestSolution[i].getAvaliacao() + ", Pen(%) : " + bestSolution[i].getPenalizacao() + "\n");
 				for(int j = 0; j < bestSolution[i].getSeatPeople().size(); j++){
-					br.write(bestSolution[i].getSeatPeople().get(j).getID() + "(" + bestSolution[i].getSeatPeople().get(j).getProfession().getArea()+ ")"  + (bestSolution[i].getSeatPeople().get(j).getGroup() != null ? " (" +bestSolution[i].getSeatPeople().get(j).getGroup().getID()+ ")\n" : "\n"));
+					br.write(bestSolution[i].getSeatPeople().get(j).getID() + "(" + bestSolution[i].getSeatPeople().get(j).getProfession().getArea()+ ")" + "(" + bestSolution[i].getSeatPeople().get(j).getAge()+ ")"  + (bestSolution[i].getSeatPeople().get(j).getGroup() != null ? " (" +bestSolution[i].getSeatPeople().get(j).getGroup().getID()+ ")\n" : "\n"));
 				}
 			}
 		}

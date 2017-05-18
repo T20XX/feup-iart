@@ -1,6 +1,7 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -37,7 +38,32 @@ public class Table {
 	private double getAfinidadeEtaria(){
 		double avgAge = 0, difAge = 0, afinidadeEtaria = 0;
 		int totalAge = 0;
+		int ages[] = {0,0,0,0};
+		
+		int diffAges = 0;
+		
 		for(Person person : seatPeople){
+			if(person.getAge() < 25)
+				ages[0]++;
+			else if (person.getAge() < 50)
+				ages[1]++;
+			else if(person.getAge() < 75)
+				ages[2]++;
+			else ages[3]++;
+		}
+		
+		for(int i = 0; i < ages.length; i++){
+			if(ages[i] != 0){
+				diffAges++;
+			}
+		}
+		
+		//System.out.print("AGES CARALHO :" + diffAges + "SIZE" + seatPeople.size() + "\n" );
+		
+		afinidadeEtaria = 1 - (double)diffAges/seatPeople.size();
+		return afinidadeEtaria*100;
+		
+		/*for(Person person : seatPeople){
 			totalAge += person.getAge();
 		}
 		avgAge = totalAge / seatPeople.size();
@@ -50,7 +76,7 @@ public class Table {
 			return 0;
 		} else {
 			return afinidadeEtaria;
-		}
+		}*/
 	}
 
 	private double getAfinidadeProfissao(){
@@ -105,9 +131,9 @@ public class Table {
 	}
 
 	public double getAvaliacao(){
-		return 0.5  * getAfinidadeHobbies()
-		+ 0.5 * getAfinidadeProfissao();
-		//+ 0.35 * getAfinidadeHobbies();
+		return 0.3*getAfinidadeEtaria()
+		+ 0.35 * getAfinidadeProfissao()
+		+ 0.35 * getAfinidadeHobbies();
 	}
 
 	public double getPenalizacao(){
