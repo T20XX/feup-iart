@@ -27,16 +27,22 @@ public class SimulatedAnnealingAlgorithm {
 		Random rand = new Random();
 		int random;
 		//random.nextInt(max - min + 1) + min
-		while(temp > 0){
+		while(temp > 0.00000000000000000001){
 			random = rand.nextInt(1-0+1);
 			solution = generateNextSolution(bestSolution);
 			avaliation = Table.getAvaliacaoRoom(solution);
 			diffAvaliation = avaliation - bestAvaliation;
 
-			if(diffAvaliation > 0 || Math.exp(diffAvaliation/temp) > random) {
+			if(diffAvaliation >= 0) {
 				bestSolution = solution;
 				bestAvaliation = avaliation;
 			}
+			else if(Math.exp(diffAvaliation/temp) > random){
+				bestSolution = solution;
+				bestAvaliation = avaliation;
+			}
+			
+			System.out.println(bestAvaliation + "," + temp);
 			temp = temp * alpha;
 		}
 		return bestSolution;

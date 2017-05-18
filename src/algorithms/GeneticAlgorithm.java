@@ -20,10 +20,9 @@ public class GeneticAlgorithm {
 	private static int nBitsPerTable;
 	private static int nBitsTotal;
 	private static int CROSSOVER_PROB = 50; //in 100
-	private static int MUTATION_PROB = 1; //in 10000
-	private static int MAX_LOOPS_WO_EVOLUTION = 1000;
+	private static int MUTATION_PROB = 10; //in 10000
 
-	public static final Table[] execute(int populationSize, int eliteSelection) throws IOException{
+	public static final Table[] execute(int populationSize, int eliteSelection, int maxLoops) throws IOException{
 		//TODO receber config por parametros
 		nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
 		nBitsTotal = nBitsPerTable * Dinner.people.length;
@@ -49,7 +48,7 @@ public class GeneticAlgorithm {
 
 
 		//TODO ciclo de algoritmo genetico
-		while(loopsWoEvolution < MAX_LOOPS_WO_EVOLUTION){
+		while(loopsWoEvolution < maxLoops){
 			loopsWoEvolution++;
 			totalAvaliation = 0;
 			bestGenerationAvaliation = 0;

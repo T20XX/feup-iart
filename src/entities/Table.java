@@ -58,7 +58,7 @@ public class Table {
 		//double afinidadeProfissao = 0;
 		for(Person person : seatPeople){
 			Area area = person.getProfession().getArea();
-			System.out.println(area);
+			//System.out.println(area);
 				areasDistintas.add(area);
 		}
 		if(areasDistintas.size() == 0)

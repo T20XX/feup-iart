@@ -46,26 +46,26 @@ public class Dinner {
 			return;
 		}
 		for(int i = 0; i < emptyTables.length; i++){
-			System.out.println(emptyTables[i].getMinSeats() + " - " + emptyTables[i].getMaxSeats());
+			//System.out.println(emptyTables[i].getMinSeats() + " - " + emptyTables[i].getMaxSeats());
 		}
 		for(int i = 0; i < people.length; i++){
-			System.out.println(people[i].getAge() + " " + people[i].getProfession() + " ");
+			//System.out.println(people[i].getAge() + " " + people[i].getProfession() + " ");
 			for(int j = 0; j < people[i].getHobbies().length; j++){
-				System.out.println(people[i].getHobbies()[j]);
+				//System.out.println(people[i].getHobbies()[j]);
 			}
 		}
 		for(int i = 0; i < groups.length; i++){
-			System.out.println("GROUP: " + i);
+			//System.out.println("GROUP: " + i);
 			for(int j = 0; j < groups[i].getMembers().length; j++){
-				System.out.println(groups[i].getMembers()[j].getAge() + " " + groups[i].getMembers()[j].getProfession() + " ");
+				//System.out.println(groups[i].getMembers()[j].getAge() + " " + groups[i].getMembers()[j].getProfession() + " ");
 				for(int k = 0; k < groups[i].getMembers()[j].getHobbies().length; k++){
-					System.out.println(groups[i].getMembers()[j].getHobbies()[k]);
+					//System.out.println(groups[i].getMembers()[j].getHobbies()[k]);
 				}
 			}
 		}		
 
-		bestSolution = SimulatedAnnealingAlgorithm.execute(100,0.05);
-		//bestSolution = GeneticAlgorithm.execute(20, 1);
+		//bestSolution = SimulatedAnnealingAlgorithm.execute(9,0.99);
+		bestSolution = GeneticAlgorithm.execute(50, 1, 5000);
 		
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);
