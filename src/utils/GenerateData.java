@@ -1,4 +1,4 @@
-package main;
+package utils;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -14,7 +14,7 @@ import entities.Profession;
 public class GenerateData {
 	public static void main(String args[]) throws IOException{
 	if(args.length != 2){
-		System.out.println("Usage: GenerateData <Input Tables File> <Generate People File> <Output File>");
+		System.out.println("Usage: GenerateData <Input Tables File> <Generate People File>");
 		return;
 	}
 	String tablesPath = args[0];
