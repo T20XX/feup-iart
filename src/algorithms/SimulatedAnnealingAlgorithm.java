@@ -1,5 +1,8 @@
 package algorithms;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.BitSet;
 import java.util.List;
@@ -14,31 +17,27 @@ import main.Dinner;
 
 public class SimulatedAnnealingAlgorithm {
 
-	public static final Table[] execute(int maxLoopsWoEvolution){
+	public static final Table[] execute(double temp, double alpha) throws IOException{
 		Table solution[] = randomInitialSolution();
 		double avaliation = Table.getAvaliacaoRoom(solution);
 		double diffAvaliation = 0;
 
 		Table bestSolution[] = solution;
 		double bestAvaliation = avaliation;
-		int loopsWoEvolution = 0;
-
-		while(loopsWoEvolution < maxLoopsWoEvolution){
-			loopsWoEvolution++;
-
+		Random rand = new Random();
+		int random;
+		//random.nextInt(max - min + 1) + min
+		while(temp > 0){
+			random = rand.nextInt(1-0+1);
 			solution = generateNextSolution(bestSolution);
 			avaliation = Table.getAvaliacaoRoom(solution);
 			diffAvaliation = avaliation - bestAvaliation;
 
-			if(diffAvaliation > 0){
+			if(diffAvaliation > 0 || Math.exp(diffAvaliation/temp) > random) {
 				bestSolution = solution;
 				bestAvaliation = avaliation;
-				loopsWoEvolution = 0;
-			} else {
-				//TODO TEMPERATURA
 			}
-
-
+			temp = temp * alpha;
 		}
 		return bestSolution;
 	}
@@ -46,12 +45,14 @@ public class SimulatedAnnealingAlgorithm {
 	private static Table[] generateNextSolution(Table[] bestSolution) {
 		Table[] nextSolution = new Table[bestSolution.length];
 		for(int i = 0; i < nextSolution.length; i++){
-			nextSolution[i] = new Table(bestSolution[i]);
+			nextSolution[i] = new Table(bestSolution[i], bestSolution[i].getSeatPeople());
 		}
-
 		//Remover pessoa de uma mesa e adicionar em outra
 		Random r = new Random();
 		int tableIndex = r.nextInt(bestSolution.length);
+		while(nextSolution[tableIndex].getSeatPeople().size() == 0){
+			tableIndex = r.nextInt(bestSolution.length);
+		}
 		int personIndex = r.nextInt(nextSolution[tableIndex].getSeatPeople().size());
 		Person person = nextSolution[tableIndex].removePerson(personIndex);
 		tableIndex = r.nextInt(bestSolution.length);
