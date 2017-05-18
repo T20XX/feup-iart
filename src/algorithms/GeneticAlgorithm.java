@@ -23,7 +23,6 @@ public class GeneticAlgorithm {
 	private static int MUTATION_PROB = 10; //in 10000
 
 	public static final Table[] execute(int maxLoops, int populationSize, int eliteSelection) throws IOException{
-		//TODO receber config por parametros
 		nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
 		nBitsTotal = nBitsPerTable * Dinner.people.length;
 		BitSet chromosomes[] = randomInitialPopulation(populationSize, nBitsTotal);
@@ -37,23 +36,22 @@ public class GeneticAlgorithm {
 
 
 		Table bestSolution[] = null;
-		double bestAvaliation = 0;
+		double bestAvaliation = -10000;
 		int loopsWoEvolution = 0;
 
-		/*for(BitSet chromosome : chromosomes){
-			System.out.println(chromosome.toString());
-			System.out.println(bitSetToInt(chromosome)[0]);
-		}*/
-
-
-
-		//TODO ciclo de algoritmo genetico
 		while(loopsWoEvolution < maxLoops){
 			loopsWoEvolution++;
 			totalAvaliation = 0;
 			bestGenerationAvaliation = 0;
 			bestGenerationIndex = 0;
+			String debugAvaliations = new String();
+			
 
+			if(loopsWoEvolution > 100){
+				MUTATION_PROB = 1000;
+			} else {
+				MUTATION_PROB = 10;
+			}
 			//AVALIACAO
 			for(int nSolution = 0; nSolution < populationSize; nSolution++){
 				solutions[nSolution] = fillTablesFromChromosome(chromosomes[nSolution]);
@@ -71,9 +69,11 @@ public class GeneticAlgorithm {
 					bestGenerationIndex = nSolution;
 				}
 				//Debug
+				debugAvaliations += avaliations[nSolution] + ",";
 				//System.out.println(chromosomeToString(chromosomes[nSolution]));
 				//System.out.println(avaliations[nSolution]);
 			}
+			System.out.println(debugAvaliations);
 
 			// SELECAO
 			selectProbs[0] = 0;
@@ -131,7 +131,7 @@ public class GeneticAlgorithm {
 		BitSet[] result = {new BitSet(nBitsTotal), new BitSet(nBitsTotal)};
 		Random r = new Random();
 
-		for(int i = 0; i < nBitsTotal; i+=nBitsPerTable){
+		/*for(int i = 0; i < nBitsTotal; i+=nBitsPerTable){
 			if(r.nextInt(100) < CROSSOVER_PROB){
 				for(int j= 0; j < nBitsPerTable; j++){
 					result[0].set(i + j,chromosome1.get(i + j));
@@ -143,6 +143,22 @@ public class GeneticAlgorithm {
 					result[1].set(i + j,chromosome1.get(i + j));
 				}
 			}
+		}*/
+		
+		if(r.nextInt(100) < CROSSOVER_PROB){
+			int crossover_point = r.nextInt(nBitsTotal);
+			for(int i = 0; i < crossover_point; i++){
+				result[0].set(i,chromosome1.get(i));
+				result[1].set(i,chromosome2.get(i));
+			}
+			for(int i = crossover_point; i < nBitsTotal; i++){
+				result[1].set(i,chromosome1.get(i));
+				result[0].set(i,chromosome2.get(i));
+			}
+			
+		}else{
+			result[0] = chromosome1;
+			result[1] = chromosome2;
 		}
 
 		return result;
