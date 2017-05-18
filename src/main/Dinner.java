@@ -26,8 +26,10 @@ public class Dinner {
 	public static Table bestSolution[];
 
 	public static void main(String[] args) throws IOException {
-		if(args.length != 3){
-			System.out.println("Usage: Dinner <Input Tables File> <Generate People File> <Output File>");
+		if(args.length < 6 || args.length > 7){
+			System.out.println("Usage: Dinner <Input Tables File> <Input People File> <Output File> genetic <Max Loops Wo Evolution> <Population Size> <N Elite Selection>\n"
+					+ "or\n"
+					+ "Usage: Dinner <Input Tables File> <Input People File> <Output File> simAnnealing <Initial Temperature> <Alpha>");
 			return;
 		}
 		PrintStream out = new PrintStream(new FileOutputStream("log.txt"));
@@ -63,6 +65,15 @@ public class Dinner {
 				}
 			}
 		}		
+		
+		if(args[4].equals("genetic")){
+			bestSolution = GeneticAlgorithm.execute(Integer.parseInt(args[5]), Integer.parseInt(args[6]), Integer.parseInt(args[7]));
+		}else if(args[4].equals("simAnnealing")){
+			bestSolution = SimulatedAnnealingAlgorithm.execute(Double.parseDouble(args[5]), Double.parseDouble(args[6]));
+		}else{
+				System.out.println("Unknown algorithm");
+				return;
+		}
 
 		//bestSolution = SimulatedAnnealingAlgorithm.execute(9,0.99);
 		bestSolution = GeneticAlgorithm.execute(50, 1, 5000);
