@@ -66,17 +66,17 @@ public class Dinner {
 			}
 		}		
 		
-		if(args[4].equals("genetic")){
-			bestSolution = GeneticAlgorithm.execute(Integer.parseInt(args[5]), Integer.parseInt(args[6]), Integer.parseInt(args[7]));
-		}else if(args[4].equals("simAnnealing")){
-			bestSolution = SimulatedAnnealingAlgorithm.execute(Double.parseDouble(args[5]), Double.parseDouble(args[6]));
+		if(args[3].equals("genetic")){
+			bestSolution = GeneticAlgorithm.execute(Integer.parseInt(args[4]), Integer.parseInt(args[5]), Integer.parseInt(args[6]));
+		}else if(args[3].equals("simAnnealing")){
+			bestSolution = SimulatedAnnealingAlgorithm.execute(Double.parseDouble(args[4]), Double.parseDouble(args[5]));
 		}else{
 				System.out.println("Unknown algorithm");
 				return;
 		}
 
 		//bestSolution = SimulatedAnnealingAlgorithm.execute(9,0.99);
-		bestSolution = GeneticAlgorithm.execute(50, 1, 5000);
+		//bestSolution = GeneticAlgorithm.execute(50, 1, 5000);
 		
 		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);

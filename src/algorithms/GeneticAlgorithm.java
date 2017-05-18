@@ -22,7 +22,7 @@ public class GeneticAlgorithm {
 	private static int CROSSOVER_PROB = 50; //in 100
 	private static int MUTATION_PROB = 10; //in 10000
 
-	public static final Table[] execute(int populationSize, int eliteSelection, int maxLoops) throws IOException{
+	public static final Table[] execute(int maxLoops, int populationSize, int eliteSelection) throws IOException{
 		//TODO receber config por parametros
 		nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
 		nBitsTotal = nBitsPerTable * Dinner.people.length;
@@ -62,7 +62,7 @@ public class GeneticAlgorithm {
 				//Update best avaliation and solution
 				if(avaliations[nSolution] > bestAvaliation){
 					bestAvaliation = avaliations[nSolution];
-					System.out.println("NEW BEST: " + bestAvaliation);
+					//System.out.println("NEW BEST: " + bestAvaliation);
 					bestSolution = solutions[nSolution];
 					loopsWoEvolution = 0;
 				}
@@ -72,12 +72,12 @@ public class GeneticAlgorithm {
 				}
 				//Debug
 				//System.out.println(chromosomeToString(chromosomes[nSolution]));
-				System.out.println(avaliations[nSolution]);
+				//System.out.println(avaliations[nSolution]);
 			}
 
 			// SELECAO
 			selectProbs[0] = 0;
-			System.out.println("PROBS\n0");
+			//System.out.println("PROBS\n0");
 			for(int nSolution = 1; nSolution <= populationSize; nSolution++){
 				selectProbs[nSolution] = selectProbs[nSolution-1] + (avaliations[nSolution-1] / totalAvaliation);
 				//System.out.println(selectProbs[nSolution]);
@@ -121,6 +121,7 @@ public class GeneticAlgorithm {
 			for(int nSolution = 0; nSolution < populationSize; nSolution++){
 				chromosomes[nSolution] = mutate(chromosomes[nSolution]);
 			}
+			System.out.println(bestAvaliation);
 
 		}
 		return bestSolution;
@@ -163,7 +164,7 @@ public class GeneticAlgorithm {
 			aux /= 2;
 			System.out.println(aux);*/
 		}
-		System.out.println(index);
+		//System.out.println(index);
 		return index;
 	}
 
@@ -201,7 +202,6 @@ public class GeneticAlgorithm {
 	}
 
 	private static Table[] fillTablesFromChromosome(BitSet chromosome){
-		//a funcionar
 		Table[] filledTables = new Table[Dinner.emptyTables.length];
 		for(int i = 0; i < filledTables.length; i++){
 			filledTables[i] = new Table(Dinner.emptyTables[i]);
@@ -214,7 +214,6 @@ public class GeneticAlgorithm {
 	}
 
 	private static int[] bitSetToInt(BitSet chromosome){
-		//a funcionar
 		int[] result = new int[Dinner.people.length];
 
 		for(int i = 0; i < Dinner.people.length; i++){
@@ -227,7 +226,6 @@ public class GeneticAlgorithm {
 	}
 
 	private static String chromosomeToString(BitSet chromosome){
-		//a funcionar
 		String result = new String();
 		int[] tables = bitSetToInt(chromosome);
 
