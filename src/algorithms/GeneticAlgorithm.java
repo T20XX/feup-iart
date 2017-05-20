@@ -64,7 +64,7 @@ public class GeneticAlgorithm {
 		double bestAvaliation = -10000;
 		int loopsWoEvolution = 0;
 
-		int count = 0;
+		//int count = 0;
 		while(loopsWoEvolution < maxLoops){
 			loopsWoEvolution++;
 			totalAvaliation = 0;
@@ -148,10 +148,10 @@ public class GeneticAlgorithm {
 			for(int nSolution = 0; nSolution < populationSize; nSolution++){
 				chromosomes[nSolution] = mutate(chromosomes[nSolution]);
 			}
-			//System.out.println(bestAvaliation);
-			count++;
+			System.out.println(bestAvaliation);
+			//count++;
 		}
-		System.out.println(count);
+		//System.out.println(count);
 		return bestSolution;
 	}
 
