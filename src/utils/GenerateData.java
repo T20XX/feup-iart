@@ -25,7 +25,7 @@ public class GenerateData {
 	
 	
 	public static void generatePeople(String path) throws IOException{
-		int nGroups = 100, randNGroups = 0, age = 0, nProfession = 0, nHobbies = 0, nHobby = 0;
+		int nGroups = 50, randNGroups = 0, age = 0, nProfession = 0, nHobbies = 0, nHobby = 0;
 		Profession p = null;
 		Hobby h = null;
 		Set<Integer> setHobbies = null;
@@ -64,7 +64,7 @@ public class GenerateData {
 	}
 	
 	public static void generateTables(String path) throws IOException{
-		int nTablesTypes = 20, nTables = 0, tmpMin = 0, tmpMax = 0, seats = 0;
+		int nTablesTypes = 10, nTables = 0, tmpMin = 0, tmpMax = 0, seats = 0;
 		BufferedWriter br = null;
 		FileWriter fr = null;
 		Set<Integer> tablesSeats = null;

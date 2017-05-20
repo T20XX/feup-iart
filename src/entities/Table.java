@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
+
+import main.Dinner;
 
 public class Table {
 
@@ -140,7 +143,7 @@ public class Table {
 		//TODO penalizacao table
 		int nPeople = seatPeople.size();
 		double penalizacao = 0;
-		HashMap<Group, Integer> groupsTable  = new HashMap<Group, Integer>();
+		/*HashMap<Group, Integer> groupsTable  = new HashMap<Group, Integer>();
 		for(Person person : seatPeople){
 			Group group = person.getGroup();
 			if(group != null){
@@ -156,15 +159,16 @@ public class Table {
 		for (Map.Entry<Group, Integer> entry : groupsTable.entrySet()){
 			int totalMembers = ((Group)entry.getKey()).getMembers().length;
 			int membersTable = entry.getValue();
-			penalizacao += (1 - membersTable/totalMembers)/(totalMembers*totalGroups) * 100;
+			penalizacao += (double)(1 - (double)membersTable/totalMembers)/(totalGroups) * 100;
 			//penalizacao += totalMembers -(membersTable/totalMembers)*totalGroups;
-		}
+		}*/
 
 
 		if(nPeople < min){
 			penalizacao += Math.pow((min - nPeople),2);
 		} else if(nPeople > max){
 			penalizacao += Math.pow((nPeople - max),3);
+			
 		}
 
 		//if(penalizacao > 100)
@@ -174,6 +178,35 @@ public class Table {
 			return 0;
 		else
 			return penalizacao;
+	}
+	
+	public static double getPenalizacaoGrupos(Table tables[]){
+		Set<Group> allGroups = new HashSet<Group>();
+		Set<Group> separatedGroups = new HashSet<Group>();
+		for(Table t: tables){
+			HashMap<Group, Integer> groupsTable  = new HashMap<Group, Integer>();
+			for(Person person : t.getSeatPeople()){
+				Group group = person.getGroup();
+				if(group != null){
+					Integer count = groupsTable.get(group);
+					if(count == null){
+						groupsTable.put(group, 1);
+					} else {
+						groupsTable.put(group, count + 1);
+					}
+				}
+			}
+			int totalGroups = groupsTable.size();
+			for (Map.Entry<Group, Integer> entry : groupsTable.entrySet()){
+				int totalMembers = ((Group)entry.getKey()).getMembers().length;
+				int membersTable = entry.getValue();
+				allGroups.add(entry.getKey());
+				if (membersTable != totalMembers){
+					separatedGroups.add(entry.getKey());
+				}
+			}
+		}
+		return (double)separatedGroups.size()/allGroups.size() * 100;
 	}
 
 	public static double getAvaliacaoRoom(Table tables[]){
@@ -192,7 +225,8 @@ public class Table {
 			}
 		}
 		result /= nPeople;
-
+		
+		result -= getPenalizacaoGrupos(tables);
 		return result;
 	}
 

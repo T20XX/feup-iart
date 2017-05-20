@@ -19,13 +19,38 @@ public class GeneticAlgorithm {
 
 	private static int nBitsPerTable;
 	private static int nBitsTotal;
-	private static int CROSSOVER_PROB = 50; //in 100
+	private static int CROSSOVER_PROB = 25; //in 100
 	private static int MUTATION_PROB = 10; //in 10000
 
 	public static final Table[] execute(int maxLoops, int populationSize, int eliteSelection) throws IOException{
 		nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
 		nBitsTotal = nBitsPerTable * Dinner.people.length;
 		BitSet chromosomes[] = randomInitialPopulation(populationSize, nBitsTotal);
+		/*//System.out.println("people para comer: " + Dinner.people.length);
+		//System.out.println("mesas para comer: " + Dinner.emptyTables.length);
+		//System.out.println("bits para mesa: " + nBitsPerTable);
+		//System.out.println("bits total: " + nBitsTotal);
+		double best = 0;
+		for(int i = 0; i < populationSize; i++){
+			Table[] solution = fillTablesFromChromosome(chromosomes[i]);
+			double avaliation = Table.getAvaliacaoRoom(solution);
+			if (avaliation > best){
+				best = avaliation;
+			}
+
+			//System.out.println(chromosomeToString(chromosomes[i]));
+			//System.out.println(bitSetToInt(chromosomes[i]).toString());
+			//System.out.println(Table.getAvaliacaoRoom(solution));
+
+			//System.out.println("Num mesas: " + solution.length);
+			//int count = 0;
+			//for(int j = 0; j < solution.length; j++){
+			//	count += solution[j].getSeatPeople().size();
+			//}
+			//System.out.println("people sentado: " + count);
+		}
+		System.out.println(best);
+		System.exit(0);*/
 		Table solutions[][] = new Table[populationSize][Dinner.emptyTables.length];
 		double avaliations[] = new double[populationSize];
 		double totalAvaliation = 0;
@@ -39,6 +64,7 @@ public class GeneticAlgorithm {
 		double bestAvaliation = -10000;
 		int loopsWoEvolution = 0;
 
+		int count = 0;
 		while(loopsWoEvolution < maxLoops){
 			loopsWoEvolution++;
 			totalAvaliation = 0;
@@ -47,11 +73,6 @@ public class GeneticAlgorithm {
 			String debugAvaliations = new String();
 			
 
-			if(loopsWoEvolution > 100){
-				MUTATION_PROB = 1000;
-			} else {
-				MUTATION_PROB = 10;
-			}
 			//AVALIACAO
 			for(int nSolution = 0; nSolution < populationSize; nSolution++){
 				solutions[nSolution] = fillTablesFromChromosome(chromosomes[nSolution]);
@@ -69,12 +90,16 @@ public class GeneticAlgorithm {
 					bestGenerationIndex = nSolution;
 				}
 				//Debug
-				debugAvaliations += avaliations[nSolution] + ",";
+				//debugAvaliations += avaliations[nSolution] + ",";
 				//System.out.println(chromosomeToString(chromosomes[nSolution]));
 				//System.out.println(avaliations[nSolution]);
 			}
-			System.out.println(debugAvaliations);
-
+			//System.out.println(debugAvaliations);
+			if(loopsWoEvolution > 100){
+				MUTATION_PROB = 5000;
+			} else {
+				MUTATION_PROB = 10;
+			}
 			// SELECAO
 			selectProbs[0] = 0;
 			//System.out.println("PROBS\n0");
@@ -83,11 +108,12 @@ public class GeneticAlgorithm {
 				//System.out.println(selectProbs[nSolution]);
 			}
 
+			//SELECAO ELITISTA
 			BitSet[] tmpChromosomes = new BitSet[populationSize];
 			for(int nSolution = 0; nSolution < eliteSelection; nSolution++){
 				tmpChromosomes[nSolution] = chromosomes[bestGenerationIndex];
 			}
-			for(int nSolution = eliteSelection; nSolution < (populationSize - eliteSelection + 1); nSolution++){
+			for(int nSolution = eliteSelection; nSolution < populationSize; nSolution++){
 				tmpChromosomes[nSolution] = chromosomes[selectRandomIndex(selectProbs)];
 			}
 			chromosomes = tmpChromosomes;
@@ -108,6 +134,7 @@ public class GeneticAlgorithm {
 					value2 = pairList.get(index2);
 					pairList.remove(index2);
 				} else {
+					tmpChromosomes[nSolution] = chromosomes[pairList.get(0)];
 					break;
 				}
 				//System.out.println(pairList);
@@ -121,9 +148,10 @@ public class GeneticAlgorithm {
 			for(int nSolution = 0; nSolution < populationSize; nSolution++){
 				chromosomes[nSolution] = mutate(chromosomes[nSolution]);
 			}
-			System.out.println(bestAvaliation);
-
+			//System.out.println(bestAvaliation);
+			count++;
 		}
+		System.out.println(count);
 		return bestSolution;
 	}
 

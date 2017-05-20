@@ -178,7 +178,7 @@ public class Dinner {
 		fr = new FileWriter(outputPath);
 		br = new BufferedWriter(fr);
 
-		br.write((int)Table.getAvaliacaoRoom(bestSolution)+"\n");
+		br.write("Avaliacao: " + (int)Table.getAvaliacaoRoom(bestSolution)+"% , Penalizacao de grupos: "+ (int)Table.getPenalizacaoGrupos(bestSolution)+"%\n");
 		br.write(String.format("| %4s | %3s | %15s | %5s| %50s |\n", "ID", "Age", "Profession", "Group", "Hobbies"));
 		
 		for(Person person : people){
