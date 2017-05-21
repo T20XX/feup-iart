@@ -26,31 +26,7 @@ public class GeneticAlgorithm {
 		nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
 		nBitsTotal = nBitsPerTable * Dinner.people.length;
 		BitSet chromosomes[] = randomInitialPopulation(populationSize, nBitsTotal);
-		/*//System.out.println("people para comer: " + Dinner.people.length);
-		//System.out.println("mesas para comer: " + Dinner.emptyTables.length);
-		//System.out.println("bits para mesa: " + nBitsPerTable);
-		//System.out.println("bits total: " + nBitsTotal);
-		double best = 0;
-		for(int i = 0; i < populationSize; i++){
-			Table[] solution = fillTablesFromChromosome(chromosomes[i]);
-			double avaliation = Table.getAvaliacaoRoom(solution);
-			if (avaliation > best){
-				best = avaliation;
-			}
 
-			//System.out.println(chromosomeToString(chromosomes[i]));
-			//System.out.println(bitSetToInt(chromosomes[i]).toString());
-			//System.out.println(Table.getAvaliacaoRoom(solution));
-
-			//System.out.println("Num mesas: " + solution.length);
-			//int count = 0;
-			//for(int j = 0; j < solution.length; j++){
-			//	count += solution[j].getSeatPeople().size();
-			//}
-			//System.out.println("people sentado: " + count);
-		}
-		System.out.println(best);
-		System.exit(0);*/
 		Table solutions[][] = new Table[populationSize][Dinner.emptyTables.length];
 		double avaliations[] = new double[populationSize];
 		double totalAvaliation = 0;
@@ -63,8 +39,7 @@ public class GeneticAlgorithm {
 		Table bestSolution[] = null;
 		double bestAvaliation = 0;
 		int loopsWoEvolution = 0;
-
-		//int count = 0;
+		
 		while(loopsWoEvolution < maxLoops){
 			loopsWoEvolution++;
 			totalAvaliation = 0;
@@ -78,10 +53,8 @@ public class GeneticAlgorithm {
 				solutions[nSolution] = fillTablesFromChromosome(chromosomes[nSolution]);
 				avaliations[nSolution] = Table.getAvaliacaoRoom(solutions[nSolution]);
 				totalAvaliation += avaliations[nSolution];
-				//Update best avaliation and solution
 				if(avaliations[nSolution] > bestAvaliation){
 					bestAvaliation = avaliations[nSolution];
-					//System.out.println("NEW BEST: " + bestAvaliation);
 					bestSolution = solutions[nSolution];
 					loopsWoEvolution = 0;
 				}
@@ -89,23 +62,11 @@ public class GeneticAlgorithm {
 					bestGenerationAvaliation = avaliations[nSolution];
 					bestGenerationIndex = nSolution;
 				}
-				//Debug
-				//debugAvaliations += avaliations[nSolution] + ",";
-				//System.out.println(chromosomeToString(chromosomes[nSolution]));
-				//System.out.println(avaliations[nSolution]);
 			}
-			//System.out.println(debugAvaliations);
-			/*if(loopsWoEvolution > 100){
-				MUTATION_PROB = 1;
-			} else {
-				MUTATION_PROB = 1;
-			}*/
 			// SELECAO
 			selectProbs[0] = 0;
-			//System.out.println("PROBS\n0");
 			for(int nSolution = 1; nSolution <= populationSize; nSolution++){
 				selectProbs[nSolution] = selectProbs[nSolution-1] + (avaliations[nSolution-1] / totalAvaliation);
-				//System.out.println(selectProbs[nSolution]);
 			}
 
 			//SELECAO ELITISTA
@@ -137,7 +98,6 @@ public class GeneticAlgorithm {
 					tmpChromosomes[nSolution] = chromosomes[pairList.get(0)];
 					break;
 				}
-				//System.out.println(pairList);
 				crossoverChromosomes = crossover(chromosomes[value1],chromosomes[value2]);
 				tmpChromosomes[nSolution] = crossoverChromosomes[0];
 				tmpChromosomes[nSolution+1] = crossoverChromosomes[1];
@@ -149,29 +109,13 @@ public class GeneticAlgorithm {
 				chromosomes[nSolution] = mutate(chromosomes[nSolution]);
 			}
 			System.out.println(bestAvaliation);
-			//count++;
 		}
-		//System.out.println(count);
 		return bestSolution;
 	}
 
 	private static BitSet[] crossover(BitSet chromosome1, BitSet chromosome2) {
 		BitSet[] result = {new BitSet(nBitsTotal), new BitSet(nBitsTotal)};
 		Random r = new Random();
-
-		/*for(int i = 0; i < nBitsTotal; i+=nBitsPerTable){
-			if(r.nextInt(100) < CROSSOVER_PROB){
-				for(int j= 0; j < nBitsPerTable; j++){
-					result[0].set(i + j,chromosome1.get(i + j));
-					result[1].set(i + j,chromosome2.get(i + j));
-				}
-			} else {
-				for(int j= 0; j < nBitsPerTable; j++){
-					result[0].set(i + j,chromosome2.get(i + j));
-					result[1].set(i + j,chromosome1.get(i + j));
-				}
-			}
-		}*/
 		
 		if(r.nextInt(100) < CROSSOVER_PROB){
 			int crossover_point = r.nextInt(nBitsTotal);
@@ -194,26 +138,15 @@ public class GeneticAlgorithm {
 
 	private static int selectRandomIndex(double[] selectProbs) {
 		double r = Math.random();
-		//int aux = (int) Math.floor(selectProbs.length/2);
-		//int index = aux;
 		int index = 0;
-		//System.out.println(r);
+		
 		while(r < selectProbs[index] || r >= selectProbs[index + 1]){
 			index++;
-			/*if(r < selectProbs[index]){
-				index -= aux;
-			} else if (r >= selectProbs[index + 1]){
-				index += aux;
-			}
-			aux /= 2;
-			System.out.println(aux);*/
 		}
-		//System.out.println(index);
 		return index;
 	}
 
 	private static BitSet mutate(BitSet chromosome){
-		//a funcionar
 		BitSet mutatedChromosome = chromosome;
 		Random r = new Random();
 
@@ -227,7 +160,6 @@ public class GeneticAlgorithm {
 	}
 
 	private static BitSet[] randomInitialPopulation(int populationSize, int nBits){
-		//a funcionar
 		BitSet chromosomes[] = new BitSet[populationSize];
 		Random r = new Random();
 		for(int i = 0; i < populationSize; i++){

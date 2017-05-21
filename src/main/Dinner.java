@@ -47,24 +47,6 @@ public class Dinner {
 			System.out.println("Unable to parse tables file.");
 			return;
 		}
-		for(int i = 0; i < emptyTables.length; i++){
-			//System.out.println(emptyTables[i].getMinSeats() + " - " + emptyTables[i].getMaxSeats());
-		}
-		for(int i = 0; i < people.length; i++){
-			//System.out.println(people[i].getAge() + " " + people[i].getProfession() + " ");
-			for(int j = 0; j < people[i].getHobbies().length; j++){
-				//System.out.println(people[i].getHobbies()[j]);
-			}
-		}
-		for(int i = 0; i < groups.length; i++){
-			//System.out.println("GROUP: " + i);
-			for(int j = 0; j < groups[i].getMembers().length; j++){
-				//System.out.println(groups[i].getMembers()[j].getAge() + " " + groups[i].getMembers()[j].getProfession() + " ");
-				for(int k = 0; k < groups[i].getMembers()[j].getHobbies().length; k++){
-					//System.out.println(groups[i].getMembers()[j].getHobbies()[k]);
-				}
-			}
-		}		
 		
 		if(args[3].equals("genetic")){
 			bestSolution = GeneticAlgorithm.execute(Integer.parseInt(args[4]), Integer.parseInt(args[5]), Integer.parseInt(args[6]));
@@ -75,10 +57,6 @@ public class Dinner {
 				return;
 		}
 
-		//bestSolution = SimulatedAnnealingAlgorithm.execute(9,0.99);
-		//bestSolution = GeneticAlgorithm.execute(50, 1, 5000);
-		
-		//TODO output best solution to ouputFile
 		writeOutput(bestSolution, outputPath);
 	}	
 

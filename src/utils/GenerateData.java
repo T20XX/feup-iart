@@ -27,12 +27,10 @@ public class GenerateData {
 	public static void generatePeople(String path) throws IOException{
 		int nGroups = 50, randNGroups = 0, age = 0, nProfession = 0, nHobbies = 0, nHobby = 0;
 		Profession p = null;
-		Hobby h = null;
 		Set<Integer> setHobbies = null;
 		
 		BufferedWriter br = null;
 		FileWriter fr = null;
-		//random.nextInt(max - min + 1) + min
 		Random rand = new Random();
 			fr = new FileWriter(path);
 			br = new BufferedWriter(fr);
@@ -48,7 +46,7 @@ public class GenerateData {
 					br.write(age  + "\n" + p + "\n");
 					setHobbies = new HashSet<Integer>();
 				for(int k = 0; k < nHobbies; k++){
-					nHobby = rand.nextInt(Hobby.values().length);
+					nHobby = rand.nextInt(5);
 					setHobbies.add(nHobby);
 				}
 				nHobbies = setHobbies.size();
@@ -69,7 +67,6 @@ public class GenerateData {
 		FileWriter fr = null;
 		Set<Integer> tablesSeats = null;
 		boolean sup = false;
-		//random.nextInt(max - min + 1) + min
 		Random rand = new Random();
 		fr = new FileWriter(path);
 		br = new BufferedWriter(fr);

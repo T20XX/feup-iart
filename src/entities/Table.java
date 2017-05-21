@@ -61,33 +61,16 @@ public class Table {
 			}
 		}
 		
-		//System.out.print("AGES CARALHO :" + diffAges + "SIZE" + seatPeople.size() + "\n" );
 		
 		afinidadeEtaria = 1 - (double)diffAges/seatPeople.size();
 		return afinidadeEtaria*100;
-		
-		/*for(Person person : seatPeople){
-			totalAge += person.getAge();
-		}
-		avgAge = totalAge / seatPeople.size();
-		for(Person person : seatPeople){
-			difAge += Math.abs(person.getAge() - avgAge);
-		}
-		//afinidadeEtaria = (1/(difAge + 1))*100;
-		afinidadeEtaria = 100 - difAge;
-		if(afinidadeEtaria < 0){
-			return 0;
-		} else {
-			return afinidadeEtaria;
-		}*/
+
 	}
 
 	private double getAfinidadeProfissao(){
 		HashSet<Area> areasDistintas = new HashSet<Area>();
-		//double afinidadeProfissao = 0;
 		for(Person person : seatPeople){
 			Area area = person.getProfession().getArea();
-			//System.out.println(area);
 				areasDistintas.add(area);
 		}
 		if(areasDistintas.size() == 0)
@@ -98,22 +81,6 @@ public class Table {
 	}
 
 	private double getAfinidadeHobbies(){
-		//TODO mapa para hobbies ligado a array de pessoas
-		//formula para testar Soma(numPessoasGostamHobby/numTotalPessoas)/NumHobbies
-		/*ArrayList<Hobby> hobbiesTotal = new ArrayList<Hobby>();
-		ArrayList<Hobby> hobbiesComum = new ArrayList<Hobby>();
-		double afinidadeHobbies = 0;
-		for(Person person : seatPeople){
-			Hobby hobbies[] = person.getHobbies();
-			for(Hobby hobby: hobbies){
-				if(!hobbiesTotal.contains(hobby)){
-					hobbiesTotal.add(hobby);
-				}else if(!hobbiesComum.contains(hobby)){
-					hobbiesComum.add(hobby);
-				}
-			}
-		}
-		afinidadeHobbies = (hobbiesTotal.size()/(hobbiesComum.size()+1))*100;*/
 		ArrayList<Hobby> hobbiesPessoas = new ArrayList<Hobby>();
 		HashSet<Hobby> hobbiesTotal = new HashSet<Hobby>();
 		double afinidadeHobbies = 0;
@@ -128,7 +95,6 @@ public class Table {
 			afinidadeHobbies += (double)((double)Collections.frequency(hobbiesPessoas, hobby)/(double)seatPeople.size())/(double)hobbiesTotal.size(); 
 		}
 		afinidadeHobbies *=100;
-		//afinidadeHobbies /= hobbiesTotal.size();
 
 		return afinidadeHobbies;
 	}
@@ -140,29 +106,8 @@ public class Table {
 	}
 
 	public double getPenalizacao(){
-		//TODO penalizacao table
 		int nPeople = seatPeople.size();
 		double penalizacao = 0;
-		/*HashMap<Group, Integer> groupsTable  = new HashMap<Group, Integer>();
-		for(Person person : seatPeople){
-			Group group = person.getGroup();
-			if(group != null){
-				Integer count = groupsTable.get(group);
-				if(count == null){
-					groupsTable.put(group, 1);
-				} else {
-					groupsTable.put(group, count + 1);
-				}
-			}
-		}
-		int totalGroups = groupsTable.size();
-		for (Map.Entry<Group, Integer> entry : groupsTable.entrySet()){
-			int totalMembers = ((Group)entry.getKey()).getMembers().length;
-			int membersTable = entry.getValue();
-			penalizacao += (double)(1 - (double)membersTable/totalMembers)/(totalGroups) * 100;
-			//penalizacao += totalMembers -(membersTable/totalMembers)*totalGroups;
-		}*/
-
 
 		if(nPeople < min){
 			penalizacao += Math.pow((min - nPeople),2);
@@ -170,9 +115,6 @@ public class Table {
 			penalizacao += Math.pow((nPeople - max),3);
 		}
 
-		//if(penalizacao > 100)
-			//return 100;
-		//else
 		if(penalizacao < 0)
 			return 0;
 		else

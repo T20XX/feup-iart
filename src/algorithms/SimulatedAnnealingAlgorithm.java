@@ -18,16 +18,6 @@ import main.Dinner;
 public class SimulatedAnnealingAlgorithm {
 
 	public static final Table[] execute(double temp, double alpha) throws IOException{
-		/*double best = 0;
-		for(int i = 0; i < 10000; i++){
-			Table solution[] = randomInitialSolution();
-			double avaliation = Table.getAvaliacaoRoom(solution);
-			if (avaliation > best){
-				best = avaliation;
-			}
-		}
-		System.out.println(best);
-		System.exit(0);*/
 		Table solution[] = randomInitialSolution();
 		double avaliation = Table.getAvaliacaoRoom(solution);
 		double diffAvaliation = 0;
@@ -36,8 +26,7 @@ public class SimulatedAnnealingAlgorithm {
 		double bestAvaliation = avaliation;
 		Random rand = new Random();
 		int random;
-		//random.nextInt(max - min + 1) + min
-		//int count = 0;
+
 		while(temp > 0.00000000000000000001){
 			random = rand.nextInt(1-0+1);
 			solution = generateNextSolution(bestSolution);
@@ -55,9 +44,7 @@ public class SimulatedAnnealingAlgorithm {
 			
 			System.out.println(bestAvaliation + "," + temp);
 			temp = temp * alpha;
-			//count++;
 		}
-		//System.out.println(count);
 		return bestSolution;
 	}
 
@@ -66,7 +53,6 @@ public class SimulatedAnnealingAlgorithm {
 		for(int i = 0; i < nextSolution.length; i++){
 			nextSolution[i] = new Table(bestSolution[i], bestSolution[i].getSeatPeople());
 		}
-		//Remover pessoa de uma mesa e adicionar em outra
 		Random r = new Random();
 		int tableIndex = r.nextInt(bestSolution.length);
 		while(nextSolution[tableIndex].getSeatPeople().size() == 0){
