@@ -32,7 +32,7 @@ public class Dinner {
 					+ "Usage: Dinner <Input Tables File> <Input People File> <Output File> simAnnealing <Initial Temperature> <Alpha>");
 			return;
 		}
-		PrintStream out = new PrintStream(new FileOutputStream("log.txt"));
+		PrintStream out = new PrintStream(new FileOutputStream("log.csv"));
 		System.setOut(out);
 		String tablesPath = args[0];
 		String peoplePath = args[1];

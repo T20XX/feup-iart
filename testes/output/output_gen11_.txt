@@ -1,4 +1,4 @@
-Avaliacao: 55% , Penalizacao de grupos: 73%
+Avaliacao: 97% , Penalizacao de grupos: 63%
 |   ID | Age |      Profession | Group|                                            Hobbies |
 |    1 |  42 |  Fisioterapeuta |    1 | Futebol,|
 |    2 |  49 |       Bartender |    1 | |
@@ -149,246 +149,182 @@ Avaliacao: 55% , Penalizacao de grupos: 73%
 |  147 |  66 |      Jornalismo |   41 | Damas,Tenis,|
 |  148 |  64 |    Farmaceutico |   41 | Tenis,Futebol,|
 Min, Max Lugares : 5, 10
-Aval(%) : 33.33333333333333, Pen(%) : 4.0
-53(Turismo)(34) (16)
-87(Turismo)(51) (25)
-125(Comunicacao)(50) (35)
-Min, Max Lugares : 5, 10
-Aval(%) : 32.5, Pen(%) : 9.0
-12(Saude)(59) (5)
-32(Comunicacao)(66) (9)
-Min, Max Lugares : 5, 10
-Aval(%) : 55.3125, Pen(%) : 1.0
-40(Engenharia)(47)
-57(Saude)(26) (18)
-69(Saude)(45) (21)
-123(Saude)(28) (35)
-Min, Max Lugares : 5, 10
-Aval(%) : 33.75, Pen(%) : 1.0
-13(Turismo)(23) (5)
-64(Engenharia)(64) (20)
-104(Saude)(88) (30)
-130(Turismo)(3) (36)
-Min, Max Lugares : 5, 10
-Aval(%) : 16.25, Pen(%) : 1.0
-47(Engenharia)(5)
-74(Arte)(80) (22)
-121(Turismo)(43) (34)
-129(Comunicacao)(47) (36)
-Min, Max Lugares : 5, 10
-Aval(%) : 36.875, Pen(%) : 1.0
-38(Educacao)(86) (12)
-41(Saude)(68) (13)
-42(Arte)(76) (13)
-111(Saude)(80) (32)
-Min, Max Lugares : 13, 14
-Aval(%) : 0.0, Pen(%) : 144.0
-106(Saude)(4) (31)
-Min, Max Lugares : 13, 14
-Aval(%) : 35.0, Pen(%) : 144.0
-113(Turismo)(66) (33)
-Min, Max Lugares : 13, 14
-Aval(%) : 35.0, Pen(%) : 144.0
-128(Arte)(40) (36)
-Min, Max Lugares : 13, 14
-Aval(%) : 35.0, Pen(%) : 144.0
-118(Educacao)(46) (34)
-Min, Max Lugares : 10, 20
-Aval(%) : 35.0, Pen(%) : 81.0
-89(Educacao)(25) (26)
-Min, Max Lugares : 10, 20
-Aval(%) : 17.5, Pen(%) : 64.0
-110(Educacao)(47) (32)
-144(Saude)(21) (40)
-Min, Max Lugares : 10, 20
-Aval(%) : 35.0, Pen(%) : 81.0
-137(Turismo)(85) (39)
-Min, Max Lugares : 10, 20
-Aval(%) : 45.27777777777778, Pen(%) : 16.0
-16(Turismo)(24)
-51(Comunicacao)(55) (16)
-54(Educacao)(24) (17)
-55(Arte)(12) (17)
-88(Arte)(4) (25)
-92(Educacao)(71) (27)
-Min, Max Lugares : 10, 20
-Aval(%) : 0.0, Pen(%) : 81.0
-145(Comunicacao)(51) (41)
-Min, Max Lugares : 10, 20
-Aval(%) : 35.0, Pen(%) : 81.0
-73(Saude)(88) (22)
-Min, Max Lugares : 10, 20
-Aval(%) : 41.11111111111111, Pen(%) : 49.0
-22(Educacao)(14) (7)
-36(Arte)(44) (11)
-37(Educacao)(4) (11)
-Min, Max Lugares : 9, 20
-Aval(%) : 26.25, Pen(%) : 49.0
-11(Educacao)(6) (5)
-136(Saude)(65) (38)
-Min, Max Lugares : 9, 20
-Aval(%) : 0.0, Pen(%) : 64.0
-66(Arte)(67) (20)
-Min, Max Lugares : 9, 20
-Aval(%) : 44.86111111111111, Pen(%) : 0.0
-46(Turismo)(64)
-48(Comunicacao)(5) (15)
-49(Comunicacao)(55) (15)
-50(Arte)(74) (16)
-107(Saude)(1) (31)
-116(Engenharia)(98) (33)
-119(Arte)(29) (34)
-135(Engenharia)(17) (38)
-139(Turismo)(75) (39)
-Min, Max Lugares : 9, 20
-Aval(%) : 34.75, Pen(%) : 16.0
-18(Saude)(46) (6)
-30(Comunicacao)(56) (9)
-67(Educacao)(82) (20)
-93(Educacao)(74) (27)
-94(Turismo)(72) (27)
-Min, Max Lugares : 9, 20
-Aval(%) : 35.0, Pen(%) : 64.0
-25(Arte)(39) (7)
-Min, Max Lugares : 9, 20
-Aval(%) : 17.5, Pen(%) : 49.0
-131(Comunicacao)(43) (37)
-132(Arte)(50) (37)
-Min, Max Lugares : 9, 20
-Aval(%) : 24.583333333333332, Pen(%) : 36.0
-15(Arte)(66) (5)
-29(Educacao)(5) (9)
-109(Turismo)(53) (32)
-Min, Max Lugares : 9, 20
-Aval(%) : 0.0, Pen(%) : 64.0
-71(Saude)(31) (21)
-Min, Max Lugares : 16, 20
-Aval(%) : 35.0, Pen(%) : 225.0
-142(Saude)(5) (40)
-Min, Max Lugares : 16, 20
-Aval(%) : 17.5, Pen(%) : 196.0
-45(Educacao)(87) (14)
-97(Comunicacao)(2) (28)
-Min, Max Lugares : 16, 20
-Aval(%) : 35.0, Pen(%) : 225.0
-126(Educacao)(87) (35)
-Min, Max Lugares : 16, 20
-Aval(%) : 17.5, Pen(%) : 196.0
-7(Educacao)(65) (3)
-8(Turismo)(47) (3)
-Min, Max Lugares : 16, 20
-Aval(%) : 17.5, Pen(%) : 196.0
-19(Saude)(62) (6)
-112(Turismo)(98) (32)
-Min, Max Lugares : 16, 20
-Aval(%) : 35.0, Pen(%) : 225.0
-3(Arte)(15) (1)
-Min, Max Lugares : 16, 20
-Aval(%) : 35.0, Pen(%) : 196.0
-59(Saude)(3) (18)
-105(Saude)(51) (31)
-Min, Max Lugares : 9, 13
-Aval(%) : 0.0, Pen(%) : 64.0
-101(Arte)(79) (30)
-Min, Max Lugares : 6, 12
-Aval(%) : 50.0, Pen(%) : 16.0
-95(Comunicacao)(83)
-108(Engenharia)(78) (31)
-Min, Max Lugares : 6, 12
-Aval(%) : 39.0, Pen(%) : 1.0
-52(Saude)(89) (16)
-86(Turismo)(86) (25)
-99(Arte)(95) (29)
-115(Turismo)(6) (33)
-120(Educacao)(17) (34)
-Min, Max Lugares : 6, 12
-Aval(%) : 50.17857142857143, Pen(%) : 0.0
-1(Saude)(42) (1)
-14(Saude)(68) (5)
-81(Turismo)(56) (23)
-96(Saude)(50) (28)
-117(Educacao)(38) (33)
-127(Comunicacao)(60) (36)
-141(Turismo)(50) (40)
-Min, Max Lugares : 6, 12
-Aval(%) : 53.611111111111114, Pen(%) : 0.0
-4(Saude)(34) (1)
-9(Saude)(88) (4)
-10(Engenharia)(62) (4)
-23(Saude)(6) (7)
+Aval(%) : 53.0, Pen(%) : 0.0
 31(Comunicacao)(11) (9)
-43(Saude)(22) (14)
-58(Engenharia)(48) (18)
-90(Comunicacao)(52) (26)
-100(Saude)(99) (29)
-Min, Max Lugares : 6, 12
-Aval(%) : 37.70833333333333, Pen(%) : 0.0
-34(Saude)(76) (10)
+94(Turismo)(72) (27)
+97(Comunicacao)(2) (28)
+115(Turismo)(6) (33)
+145(Comunicacao)(51) (41)
+Min, Max Lugares : 5, 10
+Aval(%) : 60.83333333333333, Pen(%) : 4.0
+14(Saude)(68) (5)
 60(Turismo)(59) (19)
-61(Saude)(97) (19)
-62(Engenharia)(8) (19)
-91(Turismo)(39) (27)
-138(Arte)(57) (39)
-Min, Max Lugares : 8, 17
-Aval(%) : 35.0, Pen(%) : 36.0
-102(Saude)(19) (30)
-124(Saude)(80) (35)
-Min, Max Lugares : 8, 17
-Aval(%) : 48.125, Pen(%) : 0.0
-5(Arte)(96) (2)
-6(Arte)(8) (2)
-39(Educacao)(88) (12)
-56(Arte)(24) (18)
-82(Engenharia)(57) (24)
-83(Turismo)(80) (24)
-85(Saude)(93)
-98(Educacao)(87) (28)
 122(Saude)(57)
-134(Arte)(60) (38)
-Min, Max Lugares : 8, 17
-Aval(%) : 39.166666666666664, Pen(%) : 4.0
-33(Arte)(50) (10)
-35(Turismo)(91) (10)
+Min, Max Lugares : 5, 10
+Aval(%) : 62.33333333333333, Pen(%) : 0.0
+57(Saude)(26) (18)
+102(Saude)(19) (30)
+106(Saude)(4) (31)
+107(Saude)(1) (31)
+144(Saude)(21) (40)
+Min, Max Lugares : 5, 10
+Aval(%) : 63.095238095238095, Pen(%) : 0.0
+26(Arte)(70) (7)
 63(Arte)(68) (20)
-78(Comunicacao)(44) (23)
-103(Turismo)(15) (30)
-147(Comunicacao)(66) (41)
-Min, Max Lugares : 8, 17
-Aval(%) : 36.607142857142854, Pen(%) : 1.0
-27(Arte)(20) (8)
-28(Comunicacao)(54) (8)
-44(Educacao)(4) (14)
 70(Saude)(91) (21)
-76(Engenharia)(44) (22)
+99(Arte)(95) (29)
+100(Saude)(99) (29)
 114(Arte)(99) (33)
 148(Saude)(64) (41)
-Min, Max Lugares : 8, 17
-Aval(%) : 35.89285714285714, Pen(%) : 1.0
-24(Educacao)(25) (7)
-26(Arte)(70) (7)
-65(Saude)(80) (20)
-77(Turismo)(82) (23)
-79(Engenharia)(36) (23)
+Min, Max Lugares : 9, 20
+Aval(%) : 70.0, Pen(%) : 0.0
+4(Saude)(34) (1)
+22(Educacao)(14) (7)
+23(Saude)(6) (7)
+61(Saude)(97) (19)
+67(Educacao)(82) (20)
 84(Educacao)(44)
-143(Arte)(63) (40)
-Min, Max Lugares : 4, 15
-Aval(%) : 34.0, Pen(%) : 0.0
-17(Arte)(33) (6)
-75(Engenharia)(53) (22)
-80(Educacao)(100) (23)
-133(Engenharia)(75) (38)
-140(Engenharia)(9)
-Min, Max Lugares : 4, 15
-Aval(%) : 21.875, Pen(%) : 4.0
-21(Arte)(8) (6)
-72(Saude)(80) (21)
-Min, Max Lugares : 4, 15
-Aval(%) : 0.0, Pen(%) : 9.0
+85(Saude)(93)
+118(Educacao)(46) (34)
+123(Saude)(28) (35)
+126(Educacao)(87) (35)
+Min, Max Lugares : 9, 20
+Aval(%) : 66.11111111111111, Pen(%) : 0.0
+1(Saude)(42) (1)
 2(Turismo)(49) (1)
-Min, Max Lugares : 4, 15
-Aval(%) : 35.0, Pen(%) : 9.0
+34(Saude)(76) (10)
+52(Saude)(89) (16)
+53(Turismo)(34) (16)
+91(Turismo)(39) (27)
+104(Saude)(88) (30)
+124(Saude)(80) (35)
+139(Turismo)(75) (39)
+Min, Max Lugares : 9, 20
+Aval(%) : 62.5, Pen(%) : 0.0
+7(Educacao)(65) (3)
+8(Turismo)(47) (3)
+29(Educacao)(5) (9)
+33(Arte)(50) (10)
+47(Engenharia)(5)
+50(Arte)(74) (16)
+58(Engenharia)(48) (18)
 68(Engenharia)(28) (21)
-Min, Max Lugares : 4, 15
-Aval(%) : 44.166666666666664, Pen(%) : 4.0
+69(Saude)(45) (21)
+71(Saude)(31) (21)
+72(Saude)(80) (21)
+76(Engenharia)(44) (22)
+81(Turismo)(56) (23)
+92(Educacao)(71) (27)
+95(Comunicacao)(83)
+116(Engenharia)(98) (33)
+120(Educacao)(17) (34)
+129(Comunicacao)(47) (36)
+135(Engenharia)(17) (38)
+142(Saude)(5) (40)
+Min, Max Lugares : 9, 20
+Aval(%) : 56.0, Pen(%) : 0.0
+5(Arte)(96) (2)
+6(Arte)(8) (2)
+9(Saude)(88) (4)
+10(Engenharia)(62) (4)
+19(Saude)(62) (6)
+59(Saude)(3) (18)
+82(Engenharia)(57) (24)
+83(Turismo)(80) (24)
+130(Turismo)(3) (36)
+140(Engenharia)(9)
+Min, Max Lugares : 9, 13
+Aval(%) : 62.56410256410256, Pen(%) : 0.0
+3(Arte)(15) (1)
+11(Educacao)(6) (5)
+16(Turismo)(24)
+46(Turismo)(64)
+54(Educacao)(24) (17)
+55(Arte)(12) (17)
+73(Saude)(88) (22)
+101(Arte)(79) (30)
+103(Turismo)(15) (30)
+113(Turismo)(66) (33)
+134(Arte)(60) (38)
+136(Saude)(65) (38)
+141(Turismo)(50) (40)
+Min, Max Lugares : 9, 13
+Aval(%) : 55.972222222222214, Pen(%) : 0.0
+21(Arte)(8) (6)
+24(Educacao)(25) (7)
+27(Arte)(20) (8)
+28(Comunicacao)(54) (8)
+30(Comunicacao)(56) (9)
+36(Arte)(44) (11)
+37(Educacao)(4) (11)
+56(Arte)(24) (18)
+125(Comunicacao)(50) (35)
+Min, Max Lugares : 6, 12
+Aval(%) : 60.83333333333333, Pen(%) : 0.0
+51(Comunicacao)(55) (16)
+78(Comunicacao)(44) (23)
+89(Educacao)(25) (26)
+90(Comunicacao)(52) (26)
+110(Educacao)(47) (32)
+117(Educacao)(38) (33)
+Min, Max Lugares : 6, 12
+Aval(%) : 63.92857142857143, Pen(%) : 0.0
+15(Arte)(66) (5)
+32(Comunicacao)(66) (9)
+119(Arte)(29) (34)
+128(Arte)(40) (36)
+131(Comunicacao)(43) (37)
+132(Arte)(50) (37)
+138(Arte)(57) (39)
+Min, Max Lugares : 6, 12
+Aval(%) : 57.91666666666666, Pen(%) : 0.0
+43(Saude)(22) (14)
+44(Educacao)(4) (14)
+45(Educacao)(87) (14)
+62(Engenharia)(8) (19)
+64(Engenharia)(64) (20)
+93(Educacao)(74) (27)
+98(Educacao)(87) (28)
+105(Saude)(51) (31)
+108(Engenharia)(78) (31)
+Min, Max Lugares : 8, 17
+Aval(%) : 61.07142857142857, Pen(%) : 0.0
+17(Arte)(33) (6)
+25(Arte)(39) (7)
+41(Saude)(68) (13)
+42(Arte)(76) (13)
+65(Saude)(80) (20)
+66(Arte)(67) (20)
+74(Arte)(80) (22)
+75(Engenharia)(53) (22)
+79(Engenharia)(36) (23)
+111(Saude)(80) (32)
+127(Comunicacao)(60) (36)
+133(Engenharia)(75) (38)
+143(Arte)(63) (40)
+147(Comunicacao)(66) (41)
+Min, Max Lugares : 8, 17
+Aval(%) : 67.95454545454545, Pen(%) : 0.0
+12(Saude)(59) (5)
+18(Saude)(46) (6)
 20(Engenharia)(32) (6)
+35(Turismo)(91) (10)
+38(Educacao)(86) (12)
+39(Educacao)(88) (12)
+40(Engenharia)(47)
+77(Turismo)(82) (23)
+80(Educacao)(100) (23)
+96(Saude)(50) (28)
+137(Turismo)(85) (39)
+Min, Max Lugares : 8, 17
+Aval(%) : 53.875, Pen(%) : 0.0
+13(Turismo)(23) (5)
+48(Comunicacao)(5) (15)
+49(Comunicacao)(55) (15)
+86(Turismo)(86) (25)
+87(Turismo)(51) (25)
+88(Arte)(4) (25)
+109(Turismo)(53) (32)
+112(Turismo)(98) (32)
+121(Turismo)(43) (34)
 146(Turismo)(42) (41)

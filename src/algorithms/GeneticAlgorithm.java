@@ -20,7 +20,7 @@ public class GeneticAlgorithm {
 	private static int nBitsPerTable;
 	private static int nBitsTotal;
 	private static int CROSSOVER_PROB = 25; //in 100
-	private static int MUTATION_PROB = 10; //in 10000
+	private static int MUTATION_PROB = 1; //in 10000
 
 	public static final Table[] execute(int maxLoops, int populationSize, int eliteSelection) throws IOException{
 		nBitsPerTable = (int) Math.floor(Math.log(Dinner.emptyTables.length)/Math.log(2) + 1 );
@@ -95,11 +95,11 @@ public class GeneticAlgorithm {
 				//System.out.println(avaliations[nSolution]);
 			}
 			//System.out.println(debugAvaliations);
-			if(loopsWoEvolution > 100){
-				MUTATION_PROB = 5000;
+			/*if(loopsWoEvolution > 100){
+				MUTATION_PROB = 1;
 			} else {
-				MUTATION_PROB = 10;
-			}
+				MUTATION_PROB = 1;
+			}*/
 			// SELECAO
 			selectProbs[0] = 0;
 			//System.out.println("PROBS\n0");
