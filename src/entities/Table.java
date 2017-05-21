@@ -168,7 +168,6 @@ public class Table {
 			penalizacao += Math.pow((min - nPeople),2);
 		} else if(nPeople > max){
 			penalizacao += Math.pow((nPeople - max),3);
-			
 		}
 
 		//if(penalizacao > 100)
