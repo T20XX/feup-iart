@@ -1,4 +1,4 @@
-Avaliacao: 50% , Penalizacao de grupos: 2%
+Avaliacao: 150% , Penalizacao de grupos: 2%
 |   ID | Age |      Profession | Group|                                            Hobbies |
 |    1 |  62 |            Moda |    1 | Xadrez,Damas,|
 |    2 |  60 |     Informitico |    1 | Damas,|

@@ -225,6 +225,7 @@ public class Table {
 			}
 		}
 		result /= nPeople;
+		result += 100;
 		
 		result -= getPenalizacaoGrupos(tables);
 		return result;

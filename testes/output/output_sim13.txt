@@ -1,4 +1,4 @@
-Avaliacao: 56% , Penalizacao de grupos: 0%
+Avaliacao: 156% , Penalizacao de grupos: 0%
 |   ID | Age |      Profession | Group|                                            Hobbies |
 |    1 |  53 |        Geografo |    1 | |
 |    2 |  63 |   Nutricionista |    1 | |

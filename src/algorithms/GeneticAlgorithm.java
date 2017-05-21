@@ -61,7 +61,7 @@ public class GeneticAlgorithm {
 
 
 		Table bestSolution[] = null;
-		double bestAvaliation = -10000;
+		double bestAvaliation = 0;
 		int loopsWoEvolution = 0;
 
 		//int count = 0;

@@ -1,4 +1,4 @@
-Avaliacao: 49% , Penalizacao de grupos: 4%
+Avaliacao: 149% , Penalizacao de grupos: 4%
 |   ID | Age |      Profession | Group|                                            Hobbies |
 |    1 |  42 |  Fisioterapeuta |    1 | Futebol,|
 |    2 |  49 |       Bartender |    1 | |
